@@ -1,16 +1,25 @@
 // Font
 @font-face {
   font-family: "Helvetica";
-  font-style: normal;
-  font-weight: normal;
   src: local("Helvetica"), url("../fonts/Helvetica.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Bookman Old Style";
+  font-family: "OCR A Std";
+  src: local("OCR A Std"), url("../fonts/OCRAStd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bookman Old Style Bold";
+  src: local("Bookman Old Style Bold"), url("../fonts/bookman-old-bold.ttf");
+}
+
+@font-face {
+  font-family: "DIN Alternate Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Bookman Old Style"), url("../fonts/BOOKOS.woff") format("woff");
+  src: local("DIN Alternate Bold"),
+    url("../fonts/DINAlternate-Bold.woff") format("woff");
 }
 
 @function rem($pixels) {
@@ -19,9 +28,14 @@
 
 // Variaveis
 $amarelo: #fcc217;
+$laranja: #e9481e;
 $verde: #69c494;
 $marron: #d09a3b;
 $azul: #5b78bb;
+$azul-mclovin: #1e525a;
+$vermelho: #e32313;
+$labomba-rosa: #e50051;
+$labomba-amarelo: #e7e000;
 
 html {
   scroll-behavior: smooth;
@@ -39,7 +53,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Bookman Old Style";
+  font-family: "Bookman Old Style Bold";
 }
 
 main {
@@ -47,14 +61,14 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  max-height: 100vh;
+  height: 850px;
   overflow-y: hidden;
   overflow-x: hidden;
 
   #madre {
     width: 55em;
     position: relative;
-    top: 12%;
+    top: 15%;
     right: 15%;
   }
 
@@ -67,50 +81,56 @@ main {
   }
 }
 
+#hellcat {
+  h2 {
+    color: $vermelho;
+
+    span {
+      color: $amarelo;
+    }
+  }
+}
+
+#lulupulus {
+  h2 {
+    color: $verde;
+
+    span {
+      color: $azul;
+    }
+  }
+}
+
+#mclovin {
+  h2 {
+    color: $marron;
+    span {
+      color: $azul-mclovin;
+    }
+  }
+}
+
+#psico {
+  h2 {
+    color: $azul;
+    span {
+      color: $laranja;
+    }
+  }
+}
+
 // Cervejas
 #cervejas {
-  height: 100vh;
   padding-top: 5em;
+  height: 850px;
   background-image: url(../img/fundo-cervejas.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-
-  #hellcat {
-    h2 {
-      span {
-        color: $amarelo;
-      }
-    }
-  }
-
-  #lulupulus {
-    h2 {
-      span {
-        color: $verde;
-      }
-    }
-  }
-
-  #mclovin {
-    h2 {
-      span {
-        color: $marron;
-      }
-    }
-  }
-
-  #psico {
-    h2 {
-      span {
-        color: $azul;
-      }
-    }
-  }
+  background-position: top center;
 
   .cerveja {
     h2 {
       transform: rotate(270deg);
-      font-weight: bold;
       text-align: right;
       position: relative;
       left: 20%;
@@ -132,6 +152,88 @@ main {
         margin: 0 auto;
         max-height: 500px;
       }
+    }
+  }
+}
+
+// LaBomba
+#labomba {
+  font-family: "OCR A Std";
+
+  &::before {
+    font-family: "Helvetica";
+    content: "/";
+    position: absolute;
+    color: $labomba-amarelo;
+    font-size: rem(250);
+    left: -1%;
+    margin-top: -0.2em;
+    transform: rotate(10deg);
+  }
+}
+
+footer {
+  padding: 8em 0;
+}
+
+// Page Cervejas
+.page-cerveja {
+  overflow: revert;
+
+  img {
+    margin-top: 9em;
+  }
+
+  h2 {
+    font-size: rem(90);
+    line-height: rem(70);
+
+    span {
+      font-size: rem(50);
+    }
+  }
+}
+
+// Apresentação
+#apresentacao {
+  margin-top: 4em;
+
+  &::before {
+    content: url(../img/cervejas/detail-hellcat.svg);
+  }
+
+  #infos {
+    background-color: $amarelo;
+    margin-top: -4em;
+    padding: 5em 0;
+  }
+
+  .spotify {
+    font-family: "DIN Alternate Bold";
+    display: inline-flex;
+    margin-top: -3em;
+
+    img {
+      margin-right: 1em;
+    }
+
+    &-hellcat {
+      color: $vermelho;
+      @extend .spotify;
+
+      a {
+        color: $vermelho;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  #informacoes {
+    img {
+      padding: 5em 0;
     }
   }
 }
