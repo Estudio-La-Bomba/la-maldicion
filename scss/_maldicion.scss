@@ -224,6 +224,16 @@ footer {
         top: -25%;
       }
     }
+
+
+    &-mclovin {
+      &::before {
+        content: url(../img/cervejas/details/arca_marrom.png);
+        position: absolute;
+        left: 55%;
+        top: -25%;
+      }
+    }
   }
 }
 
@@ -291,32 +301,42 @@ footer {
 
         &-9 {
           @extend .bar;
-          width: 10%;
+          width: 9%;
         }
 
         &-12 {
           @extend .bar;
-          width: 20%;
+          width: 12%;
         }
 
         &-13 {
           @extend .bar;
-          width: 24%;
+          width: 13%;
+        }
+
+        &-18 {
+          @extend .bar;
+          width: 18%;
         }
 
         &-26 {
           @extend .bar;
-          width: 30%;
+          width: 26%;
         }
 
         &-28 {
           @extend .bar;
-          width: 39%;
+          width: 28%;
+        }
+
+        &-43 {
+          @extend .bar;
+          width: 43%;
         }
 
         &-60 {
           @extend .bar;
-          width: 50%;
+          width: 60%;
         }
       }
     }
@@ -395,6 +415,39 @@ footer {
       .graphic {
         .bar {
           background-color: $verde;
+        }
+      }
+    }
+  }
+
+  &-mclovin {
+    #infos {
+      background: black !important;
+    }
+
+    .spotify {
+      color: $marron;
+      padding-top: 7em;
+
+      a {
+        color: $marron;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .cerveja-detail {
+      color: #fff;
+
+      span {
+        color: $marron;
+      }
+
+      .graphic {
+        .bar {
+          background-color: $marron;
         }
       }
     }
