@@ -198,11 +198,31 @@ footer {
   }
 
   .madre {
-    &::before {
-      content: url(../img/cervejas/details/arca_red.png);
-      position: absolute;
-      left: 55%;
-      top: -25%;
+    &-hellcat {
+      &::before {
+        content: url(../img/cervejas/details/arca_red.png);
+        position: absolute;
+        left: 55%;
+        top: -25%;
+      }
+    }
+
+    &-psico {
+      &::before {
+        content: url(../img/cervejas/details/arca_azul.png);
+        position: absolute;
+        left: 55%;
+        top: -25%;
+      }
+    }
+
+    &-lulupulus {
+      &::before {
+        content: url(../img/cervejas/details/arca_verde.png);
+        position: absolute;
+        left: 55%;
+        top: -25%;
+      }
     }
   }
 }
@@ -238,7 +258,6 @@ footer {
   .cerveja-detail {
     color: black;
     font-family: Helvetica, sans-serif;
-    font-style: italic;
     display: inherit;
 
     .icon {
@@ -250,6 +269,7 @@ footer {
     h3 {
       font-weight: 900;
       font-size: rem(21);
+      font-style: italic;
     }
 
     span {
@@ -284,6 +304,16 @@ footer {
           width: 24%;
         }
 
+        &-26 {
+          @extend .bar;
+          width: 30%;
+        }
+
+        &-28 {
+          @extend .bar;
+          width: 39%;
+        }
+
         &-60 {
           @extend .bar;
           width: 50%;
@@ -294,19 +324,17 @@ footer {
 
   &-hellcat {
     &::before {
-      content: url(../img/cervejas/detail-hellcat.svg);
+      content: url(../img/cervejas/details/detail-hellcat.svg);
     }
   }
 
   &-psico {
     #infos {
       background-color: $azul-agua !important;
-      margin-top: -4em;
-      padding: 5em 0;
     }
 
     &::before {
-      content: url(../img/cervejas/detail-psico.svg);
+      content: url(../img/cervejas/details/detail-psico.svg);
     }
 
     .spotify {
@@ -336,6 +364,41 @@ footer {
     }
   }
 
+  &-lulupulus {
+    #infos {
+      background: linear-gradient(rgba(0, 25, 77, 1) 0%, rgba(2, 93, 193, 1) 100%) !important;
+    }
+
+    &::before {
+      content: url(../img/cervejas/details/detail-lulupulus.svg);
+    }
+
+    .spotify {
+      color: $verde;
+
+      a {
+        color: $verde;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .cerveja-detail {
+      color: #fff;
+
+      span {
+        color: $verde;
+      }
+
+      .graphic {
+        .bar {
+          background-color: $verde;
+        }
+      }
+    }
+  }
 
   #infos {
     background-color: $amarelo;
@@ -345,7 +408,7 @@ footer {
 
   #informacoes {
     img {
-      padding: 5em 0;
+      margin: 5em 0;
     }
   }
 }
