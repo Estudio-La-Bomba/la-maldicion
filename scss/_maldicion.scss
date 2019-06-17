@@ -23,7 +23,7 @@
 }
 
 @function rem($pixels) {
-  @return $pixels / 16 + rem;
+  @return $pixels / 16+rem;
 }
 
 // Variaveis
@@ -32,10 +32,12 @@ $laranja: #e9481e;
 $verde: #69c494;
 $marron: #d09a3b;
 $azul: #5b78bb;
+$azul-agua: #62b4ac;
 $azul-mclovin: #1e525a;
 $vermelho: #e32313;
 $labomba-rosa: #e50051;
 $labomba-amarelo: #e7e000;
+$height-section: 900px;
 
 html {
   scroll-behavior: smooth;
@@ -57,19 +59,19 @@ h2 {
 }
 
 main {
+  height: $height-section;
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 850px;
   overflow-y: hidden;
   overflow-x: hidden;
 
   #madre {
-    width: 55em;
+    height: 950px;
     position: relative;
-    top: 15%;
-    right: 15%;
+    top: 6em;
+    right: 10%;
   }
 
   #infos {
@@ -104,6 +106,7 @@ main {
 #mclovin {
   h2 {
     color: $marron;
+
     span {
       color: $azul-mclovin;
     }
@@ -113,6 +116,7 @@ main {
 #psico {
   h2 {
     color: $azul;
+
     span {
       color: $laranja;
     }
@@ -121,8 +125,8 @@ main {
 
 // Cervejas
 #cervejas {
+  height: $height-section;
   padding-top: 5em;
-  height: 850px;
   background-image: url(../img/fundo-cervejas.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -192,15 +196,146 @@ footer {
       font-size: rem(50);
     }
   }
+
+  .madre {
+    &::before {
+      content: url(../img/cervejas/details/arca_red.png);
+      position: absolute;
+      left: 55%;
+      top: -25%;
+    }
+  }
 }
 
 // Apresentação
-#apresentacao {
+.apresentacao {
   margin-top: 4em;
 
-  &::before {
-    content: url(../img/cervejas/detail-hellcat.svg);
+  .spotify {
+    font-family: "DIN Alternate Bold";
+    display: inline-flex;
+    margin-top: -3em;
+    color: $vermelho;
+
+    h3 {
+      margin: 0;
+      padding-top: .4em;
+    }
+
+    a {
+      color: $vermelho;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    img {
+      margin-right: 1em;
+    }
   }
+
+  .cerveja-detail {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    display: inherit;
+
+    .icon {
+      width: 100px;
+      height: 100%;
+      margin-right: 1em;
+    }
+
+    h3 {
+      font-weight: 900;
+      font-size: rem(21);
+    }
+
+    span {
+      color: $vermelho;
+      font-size: rem(25);
+      line-height: rem(20);
+      font-family: "DIN Alternate Bold";
+    }
+
+    .graphic {
+      display: flex;
+      height: 20px;
+      border-right: 3px solid black;
+
+      .bar {
+        margin-left: 1em;
+        height: 20px;
+        background-color: $vermelho;
+
+        &-9 {
+          @extend .bar;
+          width: 10%;
+        }
+
+        &-12 {
+          @extend .bar;
+          width: 20%;
+        }
+
+        &-13 {
+          @extend .bar;
+          width: 24%;
+        }
+
+        &-60 {
+          @extend .bar;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  &-hellcat {
+    &::before {
+      content: url(../img/cervejas/detail-hellcat.svg);
+    }
+  }
+
+  &-psico {
+    #infos {
+      background-color: $azul-agua !important;
+      margin-top: -4em;
+      padding: 5em 0;
+    }
+
+    &::before {
+      content: url(../img/cervejas/detail-psico.svg);
+    }
+
+    .spotify {
+      color: $laranja;
+
+      a {
+        color: $laranja;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .cerveja-detail {
+      color: #4a311c;
+
+      span {
+        color: $laranja;
+      }
+
+      .graphic {
+        .bar {
+          background-color: $azul;
+        }
+      }
+    }
+  }
+
 
   #infos {
     background-color: $amarelo;
@@ -208,32 +343,35 @@ footer {
     padding: 5em 0;
   }
 
-  .spotify {
-    font-family: "DIN Alternate Bold";
-    display: inline-flex;
-    margin-top: -3em;
-
-    img {
-      margin-right: 1em;
-    }
-
-    &-hellcat {
-      color: $vermelho;
-      @extend .spotify;
-
-      a {
-        color: $vermelho;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
   #informacoes {
     img {
       padding: 5em 0;
+    }
+  }
+}
+
+// Next
+.next {
+  margin: 0;
+  padding: 0;
+
+  .col {
+    margin: 0;
+    padding: 0;
+
+    a {
+      img {
+        opacity: .7;
+        filter: grayscale(50%);
+        transition: all .5s ease;
+      }
+
+      &:hover {
+        img {
+          opacity: 1;
+          filter: grayscale(0);
+        }
+      }
     }
   }
 }
