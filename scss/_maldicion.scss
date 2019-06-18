@@ -198,30 +198,31 @@ footer {
   }
 
   .madre {
+
+    @mixin Posicao {
+      position: absolute;
+      left: 55%;
+      top: -25%;
+    }
+
     &-hellcat {
       &::before {
         content: url(../img/cervejas/details/arca_red.png);
-        position: absolute;
-        left: 55%;
-        top: -25%;
+        @include Posicao();
       }
     }
 
     &-psico {
       &::before {
         content: url(../img/cervejas/details/arca_azul.png);
-        position: absolute;
-        left: 55%;
-        top: -25%;
+        @include Posicao();
       }
     }
 
     &-lulupulus {
       &::before {
         content: url(../img/cervejas/details/arca_verde.png);
-        position: absolute;
-        left: 55%;
-        top: -25%;
+        @include Posicao();
       }
     }
 
@@ -229,9 +230,7 @@ footer {
     &-mclovin {
       &::before {
         content: url(../img/cervejas/details/arca_marrom.png);
-        position: absolute;
-        left: 55%;
-        top: -25%;
+        @include Posicao();
       }
     }
   }

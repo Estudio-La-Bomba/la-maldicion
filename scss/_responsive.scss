@@ -1,0 +1,185 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    main {
+        background-size: contain;
+        height: auto;
+
+        #madre {
+            height: 550px;
+            right: 17%;
+        }
+
+        #infos {
+            padding-top: 3em;
+
+            #logo {
+                padding-top: 1em;
+            }
+        }
+    }
+
+    #cervejas {
+        background-size: cover;
+        height: auto;
+
+        .cerveja {
+            h2 {
+                left: 30%;
+            }
+
+            a {
+                img {
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+
+    .page-cerveja {
+        img {
+            max-height: 550px;
+        }
+
+        .madre {
+
+            &-hellcat,
+            &-psico,
+            &-lulupulus,
+            &-mclovin {
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 5em;
+
+            span {
+                font-size: .5em;
+            }
+        }
+    }
+
+    .apresentacao {
+        #infos {
+            margin-top: -1em;
+        }
+
+        .spotify {
+            h3 {
+                font-size: 2em;
+                padding-top: .3em;
+            }
+        }
+
+        .cerveja-detail {
+            padding: 1em .8em;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    main {
+        background-size: contain;
+        height: auto;
+
+        #madre {
+            height: 550px;
+            right: 17%;
+        }
+
+        #infos {
+            padding-top: 3em;
+
+            #logo {
+                padding-top: 1em;
+            }
+        }
+    }
+
+    #cervejas {
+        background-size: cover;
+        height: auto;
+        padding-top: 0em;
+        padding-bottom: 2em;
+        margin-top: -2em;
+
+        .cerveja {
+            h2 {
+                left: 30%;
+            }
+
+            a {
+                img {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
+
+    .page-cerveja {
+
+        @mixin Posicao {
+            left: 50%;
+            top: -35%;
+        }
+
+        .madre {
+
+            &-hellcat,
+            &-psico,
+            &-lulupulus,
+            &-mclovin {
+                &::before {
+                    @include Posicao();
+                }
+            }
+        }
+
+
+        h2 {
+            font-size: 4em;
+            line-height: .7em;
+
+            span {
+                font-size: .5em;
+            }
+        }
+    }
+
+    .apresentacao {
+        margin-top: -7em;
+
+        #infos {
+            margin-top: -1em;
+            padding: 3em 0;
+        }
+
+        .cerveja-detail {
+            .icon {
+                width: auto;
+
+                img {
+                    max-width: 40px;
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            .infos {
+                p {
+                    font-size: 14px;
+                }
+
+                h3 {
+                    font-size: .8rem;
+                }
+
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
