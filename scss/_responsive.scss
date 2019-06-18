@@ -1,84 +1,3 @@
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-    main {
-        background-size: contain;
-        height: auto;
-
-        #madre {
-            height: 550px;
-            right: 17%;
-        }
-
-        #infos {
-            padding-top: 3em;
-
-            #logo {
-                padding-top: 1em;
-            }
-        }
-    }
-
-    #cervejas {
-        background-size: cover;
-        height: auto;
-
-        .cerveja {
-            h2 {
-                left: 30%;
-            }
-
-            a {
-                img {
-                    max-width: 120px;
-                }
-            }
-        }
-    }
-
-    .page-cerveja {
-        img {
-            max-height: 550px;
-        }
-
-        .madre {
-
-            &-hellcat,
-            &-psico,
-            &-lulupulus,
-            &-mclovin {
-                &::before {
-                    content: none;
-                }
-            }
-        }
-
-        h2 {
-            font-size: 5em;
-
-            span {
-                font-size: .5em;
-            }
-        }
-    }
-
-    .apresentacao {
-        #infos {
-            margin-top: -1em;
-        }
-
-        .spotify {
-            h3 {
-                font-size: 2em;
-                padding-top: .3em;
-            }
-        }
-
-        .cerveja-detail {
-            padding: 1em .8em;
-        }
-    }
-}
-
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
     main {
@@ -181,5 +100,83 @@
     }
 }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    main {
+        background-size: contain;
+        height: auto;
+
+        #madre {
+            height: 550px;
+            right: 17%;
+        }
+
+        #infos {
+            padding-top: 3em;
+
+            #logo {
+                padding-top: 1em;
+            }
+        }
+    }
+
+    #cervejas {
+        background-size: cover;
+        height: auto;
+
+        .cerveja {
+            h2 {
+                left: 30%;
+            }
+
+            a {
+                img {
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+
+    .page-cerveja {
+        img {
+            max-height: 550px;
+        }
+
+        .madre {
+
+            &-hellcat,
+            &-psico,
+            &-lulupulus,
+            &-mclovin {
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 5em;
+
+            span {
+                font-size: .5em;
+            }
+        }
+    }
+
+    .apresentacao {
+        #infos {
+            margin-top: -1em;
+        }
+
+        .spotify {
+            h3 {
+                font-size: 2em;
+                padding-top: .3em;
+            }
+        }
+
+        .cerveja-detail {
+            padding: 1em .8em;
+        }
+    }
+}
