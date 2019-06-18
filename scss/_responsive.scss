@@ -12,6 +12,7 @@
         #infos {
             padding-top: 3em;
 
+
             #logo {
                 padding-top: 1em;
             }
@@ -87,6 +88,8 @@
             }
 
             .infos {
+                width: 100%;
+
                 p {
                     font-size: 14px;
                 }
@@ -164,6 +167,8 @@
     }
 
     .apresentacao {
+        margin-top: 4em;
+
         #infos {
             margin-top: -1em;
         }
