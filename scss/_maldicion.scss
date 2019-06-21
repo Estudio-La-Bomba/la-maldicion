@@ -58,6 +58,30 @@ h2 {
   font-family: "Bookman Old Style Bold";
 }
 
+#social {
+  list-style: none;
+  display: inline-flex;
+  padding: 2em 0;
+  margin: 0;
+
+  li {
+    padding-right: 1em;
+
+    a {
+      color: #fff;
+      transition: all .3s ease;
+
+      i {
+        font-size: rem(30);
+      }
+
+      &:hover {
+        color: $amarelo;
+      }
+    }
+  }
+}
+
 main {
   height: $height-section;
   background-image: url(../img/header.jpg);
@@ -78,6 +102,7 @@ main {
     padding-top: 10em;
 
     #logo {
+      display: block;
       padding-top: 5em;
     }
   }
@@ -163,16 +188,41 @@ main {
 // LaBomba
 #labomba {
   font-family: "OCR A Std";
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 
-  &::before {
-    font-family: "Helvetica";
-    content: "/";
-    position: absolute;
-    color: $labomba-amarelo;
-    font-size: rem(250);
-    left: -1%;
-    margin-top: -0.2em;
-    transform: rotate(10deg);
+  #infos {
+    padding: 3em 2em;
+  }
+
+  .cases {
+    display: flex;
+    flex-flow: row;
+
+    .case {
+      flex-grow: 1;
+      width: 280px;
+      height: 400px;
+      transform: skew(-10deg);
+
+      a {
+        filter: grayscale(100%);
+        transition: all .5s ease;
+        opacity: 1;
+
+        img {
+          width: auto;
+          height: 100%;
+        }
+
+        &:hover {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
