@@ -1,6 +1,6 @@
 .jumbotron {
   color: $jumbotron-color;
-  background-color: $jumbotron-bg;
+  background-color: $black;
   @include border-radius($border-radius-lg);
 }
 
