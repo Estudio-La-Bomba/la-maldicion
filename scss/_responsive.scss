@@ -110,8 +110,10 @@
         height: auto;
 
         #madre {
-            height: 550px;
-            right: 17%;
+            height: 370px;
+            right: 0%;
+            left: 6%;
+            top: 4em;
         }
 
         #infos {
@@ -129,16 +131,58 @@
 
         .cerveja {
             h2 {
-                left: 30%;
+                font-size: 25px;
+                left: 20%;
+                top: 38%;
+
+                span {
+                    font-size: rem(15);
+                }
             }
 
             a {
                 img {
-                    max-width: 120px;
+                    max-width: 90px;
+                    margin-left: 1em;
                 }
             }
         }
     }
+
+    // LaBomba
+    #labomba {
+        .cases {
+            position: relative;
+            right: 5%;
+
+            .case {
+                width: (110% / 3);
+                height: 400px;
+                transform: skew(0deg);
+            }
+        }
+    }
+
+    // Call to Action
+    #cta {
+        padding: 2em 0;
+
+        h2 {
+            line-height: rem(80);
+        }
+    }
+
+    // Rodapé
+    footer {
+        form {
+            padding-bottom: 5em;
+        }
+
+        img {
+            width: 200px;
+        }
+    }
+
 
     .page-cerveja {
         img {
