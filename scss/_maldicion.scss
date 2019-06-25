@@ -104,7 +104,7 @@ main {
 
     #logo {
       display: block;
-      padding-top: 5em;
+      margin-top: 5em;
     }
   }
 }
@@ -236,10 +236,9 @@ main {
   h2 {
     font-size: rem(80);
     letter-spacing: -20px;
-    line-height: rem(100);
-    padding-top: 1em;
     color: $labomba-rosa;
     font-family: "OCR A Std";
+    margin-left: -.1em;
 
     &::before {
       left: -0.85em;
@@ -254,8 +253,7 @@ main {
 
   i {
     color: $labomba-amarelo;
-    font-size: rem(150);
-    margin: .2em 0;
+    font-size: rem(100);
     transition: all .4s ease;
   }
 
@@ -272,9 +270,11 @@ main {
 }
 
 footer {
-  padding: 3em 0;
+  padding-bottom: 3em;
 
   form {
+    margin-top: 5em;
+
     .form-control {
       background: transparent;
       font-size: rem(14);
