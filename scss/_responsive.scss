@@ -1,3 +1,28 @@
+// iPad Pro (12Inch)
+@media (max-width: 1025px) {
+
+    // LaBomba
+    #labomba {
+        .lead {
+            font-size: 16px;
+        }
+
+        .cases {
+            .case {
+                width: (100% / 3);
+                height: 400px;
+            }
+        }
+    }
+
+
+    #cta {
+        h2 {
+            padding-top: 0.5em;
+        }
+    }
+}
+
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
     main {
@@ -36,6 +61,27 @@
                     max-width: 110px;
                 }
             }
+        }
+    }
+
+
+    // LaBomba
+    #labomba {
+        .lead {
+            font-size: 16px;
+        }
+
+        .cases {
+            .case {
+                width: (100% / 3);
+                height: 400px;
+            }
+        }
+    }
+
+    #cta {
+        h2 {
+            padding-top: 0.5em;
         }
     }
 
