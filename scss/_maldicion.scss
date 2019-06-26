@@ -58,6 +58,103 @@ h2 {
   font-family: "Bookman Old Style Bold";
 }
 
+// Menu Mobile
+.menu {
+  margin-top: 8em;
+  font-family: "Bookman Old Style Bold";
+  padding: 0;
+  font-size: rem(20);
+
+  button {
+    border: none;
+    box-shadow: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cta {
+    height: 29px;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  .toggle-btn {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    top: 50%;
+    left: 0;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+
+    &:before {
+      content: "";
+      height: 3px;
+      width: 30px;
+      box-shadow: 0 -10px 0 0 #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      height: 3px;
+      width: 30px;
+      box-shadow: 0 10px 0 0 #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .type17 {
+    &:before {
+      width: 17px;
+    }
+
+    &:after {
+      width: 17px;
+      box-shadow: 13px 10px 0 0 #fff;
+    }
+  }
+
+  .active {
+    .toggle-btn {
+      background-color: transparent;
+      transition: all 0.2s ease-in-out;
+
+      &:before {
+        top: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:after {
+        top: 0;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .type17 {
+      transform: rotate(45deg);
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+
+      &:before {
+        transform: translate(-4px, -6px) rotate(90deg);
+      }
+
+      &:after {
+        transform: translate(16px, -7px) rotate(90deg);
+      }
+    }
+  }
+}
+
 #social {
   list-style: none;
   display: inline-flex;
@@ -95,16 +192,14 @@ main {
   #madre {
     height: 950px;
     position: relative;
-    top: 6em;
     right: 10%;
+    bottom: 3em;
   }
 
   #infos {
-    padding-top: 10em;
-
     #logo {
       display: block;
-      margin-top: 5em;
+      margin-top: 3em;
     }
   }
 }
@@ -157,10 +252,6 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-
-  .lead {
-    font-family: "Bookman Old Style Bold";
-  }
 
   .cerveja {
     h2 {

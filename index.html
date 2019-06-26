@@ -52,6 +52,51 @@
   <body>
     <!-- Introdução -->
     <main>
+      <!-- Menu -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-11">
+            <nav class="navbar navbar-dark bg-transparent menu">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <div class="cta">
+                  <div class="toggle-btn type17"></div>
+                </div>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Inicio </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a
+                      class="nav-link"
+                      href="https://lamaldicion.estudiolabomba.com/#cervejas"
+                      >Cervejas
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a
+                      class="nav-link"
+                      href="https://lamaldicion.estudiolabomba.com/#contato"
+                      >Contato</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row align-items-center ">
           <div class="col-md-6" id="infos" data-aos="fade-right">
@@ -132,8 +177,8 @@
     <section id="cervejas">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
-            <p class="lead">Clique nas cervejas e conheça as maldições.</p>
+          <div class="col-12">
+            <h2>Clique nas cervejas e conheça as maldições.</h2>
           </div>
           <div class="col-6 col-md-3 cerveja" id="hellcat">
             <h2><span>HellCat</span><br />IPA</h2>
@@ -283,7 +328,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6" id="contato">
             <form>
               <div class="form-group">
                 <input
@@ -363,5 +408,12 @@
     <!-- Scripts -->
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(document).on("click", ".cta", function() {
+          $(this).toggleClass("active");
+        });
+      });
+    </script>
   </body>
 </html>
