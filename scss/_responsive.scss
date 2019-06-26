@@ -1,271 +1,268 @@
 // iPad Pro (12Inch)
 @media (max-width: 1025px) {
 
-    // LaBomba
-    #labomba {
-        .lead {
-            font-size: 16px;
-        }
-
-        .cases {
-            .case {
-                width: (100% / 3);
-                height: 400px;
-            }
-        }
+  // LaBomba
+  #labomba {
+    .lead {
+      font-size: 16px;
     }
 
-
-    #cta {
-        h2 {
-            padding-top: 0.5em;
-        }
+    .cases {
+      .case {
+        width: (100% / 3);
+        height: 400px;
+      }
     }
+  }
+
+  #cta {
+    h2 {
+      padding-top: 0.5em;
+    }
+  }
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-    main {
-        background-size: contain;
-        height: auto;
+  main {
+    background-size: contain;
+    height: auto;
 
-        #madre {
-            height: 550px;
-            right: 17%;
-        }
-
-        #infos {
-            padding-top: 3em;
-
-
-            #logo {
-                margin-top: 1em;
-            }
-        }
+    #madre {
+      height: 550px;
+      right: 17%;
     }
 
-    #cervejas {
-        background-size: cover;
-        height: auto;
-        padding-top: 0em;
-        padding-bottom: 2em;
-        margin-top: -2em;
+    #infos {
+      padding-top: 3em;
 
-        .cerveja {
-            h2 {
-                left: 30%;
-            }
+      #logo {
+        margin-top: 1em;
+      }
+    }
+  }
 
-            a {
-                img {
-                    max-width: 110px;
-                }
-            }
+  #cervejas {
+    background-size: cover;
+    height: auto;
+    padding-top: 0em;
+    padding-bottom: 2em;
+    margin-top: -2em;
+
+    .cerveja {
+      h2 {
+        left: 30%;
+      }
+
+      a {
+        img {
+          max-width: 110px;
         }
+      }
+    }
+  }
+
+  // LaBomba
+  #labomba {
+    .lead {
+      font-size: 16px;
     }
 
+    .cases {
+      .case {
+        width: (100% / 3);
+        height: 400px;
+      }
+    }
+  }
 
-    // LaBomba
-    #labomba {
-        .lead {
-            font-size: 16px;
-        }
+  #cta {
+    h2 {
+      padding-top: 0.5em;
+    }
+  }
 
-        .cases {
-            .case {
-                width: (100% / 3);
-                height: 400px;
-            }
-        }
+  .page-cerveja {
+    @mixin Posicao {
+      left: 50%;
+      top: -35%;
     }
 
-    #cta {
-        h2 {
-            padding-top: 0.5em;
+    .madre {
+
+      &-hellcat,
+      &-psico,
+      &-lulupulus,
+      &-mclovin {
+        &::before {
+          @include Posicao();
         }
+      }
     }
 
-    .page-cerveja {
+    h2 {
+      font-size: 4em;
+      line-height: 0.7em;
 
-        @mixin Posicao {
-            left: 50%;
-            top: -35%;
-        }
+      span {
+        font-size: 0.5em;
+      }
+    }
+  }
 
-        .madre {
+  .apresentacao {
+    margin-top: -7em;
 
-            &-hellcat,
-            &-psico,
-            &-lulupulus,
-            &-mclovin {
-                &::before {
-                    @include Posicao();
-                }
-            }
-        }
-
-
-        h2 {
-            font-size: 4em;
-            line-height: .7em;
-
-            span {
-                font-size: .5em;
-            }
-        }
+    #infos {
+      margin-top: -1em;
+      padding: 3em 0;
     }
 
-    .apresentacao {
-        margin-top: -7em;
+    .cerveja-detail {
+      .icon {
+        width: auto;
 
-        #infos {
-            margin-top: -1em;
-            padding: 3em 0;
+        img {
+          max-width: 40px;
+          padding-bottom: 1.5em;
+        }
+      }
+
+      .infos {
+        width: 100%;
+
+        p {
+          font-size: 14px;
         }
 
-        .cerveja-detail {
-            .icon {
-                width: auto;
-
-                img {
-                    max-width: 40px;
-                    padding-bottom: 1.5em;
-                }
-            }
-
-            .infos {
-                width: 100%;
-
-                p {
-                    font-size: 14px;
-                }
-
-                h3 {
-                    font-size: .8rem;
-                }
-
-            }
+        h3 {
+          font-size: 0.8rem;
         }
+      }
     }
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-    main {
-        background-size: contain;
-        height: auto;
+  main {
+    background-size: contain;
+    height: auto;
 
-        #madre {
-            height: 370px;
-            right: 0%;
-            left: 6%;
-            top: 4em;
-        }
+    #madre {
+      height: 370px;
+      right: 0%;
+      left: 6%;
+      top: 4em;
+    }
+  }
+
+  #cervejas {
+    background-size: cover;
+    height: auto;
+
+    .lead {
+      padding-top: 3em;
     }
 
-    #cervejas {
-        background-size: cover;
-        height: auto;
+    .cerveja {
+      h2 {
+        font-size: 25px;
+        left: 20%;
+        top: 38%;
 
-        .cerveja {
-            h2 {
-                font-size: 25px;
-                left: 20%;
-                top: 38%;
-
-                span {
-                    font-size: rem(15);
-                }
-            }
-
-            a {
-                img {
-                    max-width: 90px;
-                    margin-left: 1em;
-                }
-            }
+        span {
+          font-size: rem(15);
         }
-    }
+      }
 
-    // LaBomba
-    #labomba {
-        .cases {
-            position: relative;
-            right: 5%;
-
-            .case {
-                width: (110% / 3);
-                height: 400px;
-                transform: skew(0deg);
-            }
-        }
-    }
-
-    // Call to Action
-    #cta {
-        padding: 2em 0;
-
-        h2 {
-            line-height: rem(80);
-        }
-    }
-
-    // Rodapé
-    footer {
-        margin-top: 0;
-
-        form {
-            padding-bottom: 5em;
-        }
-
+      a {
         img {
-            width: 200px;
+          max-width: 90px;
+          margin-left: 1em;
         }
+      }
+    }
+  }
+
+  // LaBomba
+  #labomba {
+    .cases {
+      position: relative;
+      right: 5%;
+
+      .case {
+        width: (110% / 3);
+        height: 400px;
+        transform: skew(0deg);
+      }
+    }
+  }
+
+  // Call to Action
+  #cta {
+    padding: 2em 0;
+
+    h2 {
+      line-height: rem(80);
+    }
+  }
+
+  // Rodapé
+  footer {
+    margin-top: 0;
+
+    form {
+      padding-bottom: 5em;
     }
 
+    img {
+      width: 200px;
+    }
+  }
 
-    .page-cerveja {
-        img {
-            max-height: 550px;
-        }
-
-        .madre {
-
-            &-hellcat,
-            &-psico,
-            &-lulupulus,
-            &-mclovin {
-                &::before {
-                    content: none;
-                }
-            }
-        }
-
-        h2 {
-            font-size: 5em;
-
-            span {
-                font-size: .5em;
-            }
-        }
+  .page-cerveja {
+    img {
+      max-height: 550px;
     }
 
-    .apresentacao {
-        margin-top: 4em;
+    .madre {
 
-        #infos {
-            margin-top: -1em;
+      &-hellcat,
+      &-psico,
+      &-lulupulus,
+      &-mclovin {
+        &::before {
+          content: none;
         }
-
-        .spotify {
-            h3 {
-                font-size: 2em;
-                padding-top: .3em;
-            }
-        }
-
-        .cerveja-detail {
-            padding: 1em .8em;
-        }
+      }
     }
+
+    h2 {
+      font-size: 5em;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+  }
+
+  .apresentacao {
+    margin-top: 4em;
+
+    #infos {
+      margin-top: -1em;
+    }
+
+    .spotify {
+      h3 {
+        font-size: 2em;
+        padding-top: 0.3em;
+      }
+    }
+
+    .cerveja-detail {
+      padding: 1em 0.8em;
+    }
+  }
 }

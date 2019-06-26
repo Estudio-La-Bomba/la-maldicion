@@ -158,6 +158,10 @@ main {
   background-repeat: no-repeat;
   background-position: top center;
 
+  .lead {
+    font-family: "Bookman Old Style Bold";
+  }
+
   .cerveja {
     h2 {
       transform: rotate(270deg);
@@ -399,6 +403,12 @@ footer {
     font-family: Helvetica, sans-serif;
     display: inherit;
 
+    .lead {
+      font-family: "Bookman Old Style Bold";
+      padding-top: 1em;
+      margin: 0;
+    }
+
     .icon {
       width: 100px;
       height: 100%;
@@ -585,7 +595,7 @@ footer {
   #infos {
     background-color: $amarelo;
     margin-top: -4em;
-    padding: 5em 0;
+    padding: 3em 0;
   }
 
   #informacoes {
