@@ -23,21 +23,20 @@
 }
 
 @function rem($pixels) {
-  @return $pixels / 16+rem;
+  @return $pixels / 16 + rem;
 }
 
 // Variaveis
+$marron: #d09a3b;
 $amarelo: #fcc217;
 $laranja: #e9481e;
+$vermelho: #e32313;
 $verde: #69c494;
-$marron: #d09a3b;
 $azul: #5b78bb;
 $azul-agua: #62b4ac;
 $azul-mclovin: #1e525a;
-$vermelho: #e32313;
 $labomba-rosa: #e50051;
 $labomba-amarelo: #e7e000;
-$height-section: 900px;
 
 html {
   scroll-behavior: smooth;
@@ -51,155 +50,70 @@ body {
   overflow-x: hidden;
   font-size: 16px;
   color: white;
+  background-image: url(../img/fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Bookman Old Style Bold";
 }
 
-// Menu Mobile
-.menu {
-  margin-top: 8em;
-  font-family: "Bookman Old Style Bold";
-  padding: 0;
-  font-size: rem(20);
-
-  button {
-    border: none;
-    box-shadow: none;
-    display: inline-flex;
-    padding: 0;
-    margin: 0;
-  }
-
-  .cta {
-    height: 29px;
-    width: 32px;
-    cursor: pointer;
-  }
-
-  .toggle-btn {
-    height: 3px;
-    width: 30px;
-    background-color: #fff;
-    position: relative;
-    top: 50%;
-    left: 0;
-    margin: auto;
-    transition: all 0.3s ease-in-out;
-
-    &:before {
-      content: "";
-      height: 3px;
-      width: 30px;
-      box-shadow: 0 -10px 0 0 #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: all 0.3s ease-in-out;
-    }
-
-    &:after {
-      content: "";
-      height: 3px;
-      width: 30px;
-      box-shadow: 0 10px 0 0 #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  .type17 {
-    &:before {
-      width: 17px;
-    }
-
-    &:after {
-      width: 17px;
-      box-shadow: 13px 10px 0 0 #fff;
-    }
-  }
-
-  .active {
-    .toggle-btn {
-      background-color: transparent;
-      transition: all 0.2s ease-in-out;
-
-      &:before {
-        top: 0;
-        transition: all 0.3s ease-in-out;
-      }
-
-      &:after {
-        top: 0;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-
-    .type17 {
-      transform: rotate(45deg);
-      background-color: #fff;
-      transition: all 0.3s ease-in-out;
-
-      &:before {
-        transform: translate(-4px, -6px) rotate(90deg);
-      }
-
-      &:after {
-        transform: translate(16px, -7px) rotate(90deg);
-      }
-    }
-  }
+.section {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#social {
-  list-style: none;
-  display: inline-flex;
-  padding-top: 2em;
-  padding-left: 0;
-  margin: 0;
-
-  li {
-    padding-right: 1em;
-
-    a {
-      color: #fff;
-      transition: all .3s ease;
-
-      i {
-        font-size: rem(35);
-      }
-
-      &:hover {
-        color: $amarelo;
+// Menu
+#fp-nav {
+  ul {
+    li {
+      a span {
+        background: $labomba-amarelo;
       }
     }
   }
 }
 
 main {
-  height: $height-section;
-  background-image: url(../img/header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
   overflow-y: hidden;
   overflow-x: hidden;
 
-  #madre {
-    height: 950px;
-    position: relative;
-    right: 10%;
-    bottom: 3em;
-  }
+  #introducao {
+    padding-left: 4em;
 
-  #infos {
-    #logo {
-      display: block;
-      margin-top: 3em;
+    #infos {
+      padding-top: rem(150);
+
+      h1 {
+        font-size: rem(48);
+      }
+    }
+
+    #antidote {
+      padding-top: 1em;
+
+      a {
+        display: inline-flex;
+        transition: all 0.4s ease;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+
+      h4 {
+        color: $labomba-amarelo;
+        margin: 0;
+        padding: 1.5em;
+      }
     }
   }
 }
@@ -246,20 +160,19 @@ main {
 
 // Cervejas
 #cervejas {
-  height: $height-section;
-  padding-top: 5em;
-  background-image: url(../img/fundo-cervejas.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-
   .cerveja {
+    text-align: center;
+    margin-top: 5em;
+
     h2 {
       transform: rotate(270deg);
       text-align: right;
-      position: relative;
-      left: 20%;
-      top: 31%;
+      position: absolute;
+      left: 0%;
+      top: 2%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s ease;
 
       span {
         font-size: rem(20);
@@ -278,129 +191,106 @@ main {
         max-height: 500px;
       }
     }
-  }
-}
 
-// LaBomba
-#labomba {
-  font-family: "OCR A Std";
-  overflow-y: hidden;
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
-
-  #infos {
-    padding: 3em 2em;
-  }
-
-  .cases {
-    display: flex;
-    flex-flow: row;
-
-    .case {
-      flex-grow: 1;
-      width: 280px;
-      height: 400px;
-      transform: skew(-10deg);
-
-      a {
-        filter: grayscale(100%);
-        transition: all .5s ease;
+    &:hover {
+      h2 {
+        left: 70%;
         opacity: 1;
-
-        img {
-          width: auto;
-          height: 100%;
-        }
-
-        &:hover {
-          filter: grayscale(0);
-          opacity: 1;
-        }
       }
     }
   }
 }
 
-// Call to Action
-#cta {
-  padding: 5em 0;
-  color: white;
-  font-family: "OCR A Std";
-
-  h2 {
-    font-size: rem(80);
-    letter-spacing: -20px;
-    color: $labomba-rosa;
-    font-family: "OCR A Std";
-    margin-left: -.1em;
-
-    &::before {
-      left: -0.85em;
-      top: 0em;
-    }
-  }
-
-  p {
-    padding-top: 0.5em;
-    max-width: 750px;
-  }
-
-  i {
-    color: $labomba-amarelo;
-    font-size: rem(100);
-    transition: all .4s ease;
-  }
+// Footer
+#conversa {
+  margin-top: 5em;
 
   a {
-    color: $labomba-amarelo;
-    transition: all .4s ease;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.4s ease;
 
-    &:hover,
-    i:hover {
-      text-decoration: none;
-      color: $labomba-rosa;
+    h2 {
+      font-family: "OCR A Std";
+      color: $labomba-amarelo;
+      font-size: rem(50);
+      padding: 0.5em 0;
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+      h2 {
+        color: $labomba-rosa;
+      }
     }
   }
 }
 
 footer {
-  padding-bottom: 3em;
   margin-top: 5em;
 
-  form {
-    margin-top: 5em;
+  p {
+    margin-top: 3em;
+  }
 
-    .form-control {
-      background: transparent;
-      font-size: rem(14);
-      padding: 1.5em 1em;
-      color: white;
+  #infos {
+    font-size: rem(14);
+    font-family: "OCR A Std";
+    padding: 0;
+    display: inline-flex;
+    list-style: none;
+    color: #999999;
 
-      &::placeholder {
-        color: #f5f5f5;
-        opacity: .7;
-        font-size: rem(14);
-      }
+    li {
+      padding: 0 0.8em;
+    }
 
-      &:focus {
-        background: transparent;
-        border-color: white;
-        color: white;
-        box-shadow: none;
+    span {
+      color: $labomba-amarelo;
+    }
 
-        &::placeholder {
-          opacity: 1;
-        }
+    a {
+      color: #999999;
+      transition: all 0.4s ease;
+
+      &:hover {
+        color: $labomba-amarelo;
+        text-decoration: none;
       }
     }
 
-    button {
-      background-color: white !important;
-      display: block;
-      width: 100%;
-      height: 40px;
-      color: black !important;
+    #social {
+      list-style: none;
+      display: inline-flex;
+      color: $labomba-amarelo;
+      margin-left: 2.5em;
+      padding: 0;
+
+      li {
+        font-size: 1.3em;
+        padding: 0 0.5em;
+
+        i {
+          transition: all 0.4s ease;
+        }
+      }
+    }
+  }
+
+  #creditos {
+    color: #999999;
+    font-size: rem(12);
+
+    a {
+      @extend #creditos;
+      transition: all 0.4s ease;
+
+      &:hover {
+        text-decoration: none;
+        color: $labomba-amarelo;
+      }
     }
   }
 }
@@ -423,7 +313,6 @@ footer {
   }
 
   .madre {
-
     @mixin Posicao {
       position: absolute;
       left: 55%;
@@ -451,7 +340,6 @@ footer {
       }
     }
 
-
     &-mclovin {
       &::before {
         content: url(../img/cervejas/details/arca_marrom.png);
@@ -473,7 +361,7 @@ footer {
 
     h3 {
       margin: 0;
-      padding-top: .4em;
+      padding-top: 0.4em;
     }
 
     a {
@@ -616,7 +504,10 @@ footer {
 
   &-lulupulus {
     #infos {
-      background: linear-gradient(rgba(0, 25, 77, 1) 0%, rgba(2, 93, 193, 1) 100%) !important;
+      background: linear-gradient(
+        rgba(0, 25, 77, 1) 0%,
+        rgba(2, 93, 193, 1) 100%
+      ) !important;
     }
 
     &::before {
@@ -707,15 +598,114 @@ footer {
 
     a {
       img {
-        opacity: .7;
+        opacity: 0.7;
         filter: grayscale(50%);
-        transition: all .5s ease;
+        transition: all 0.5s ease;
       }
 
       &:hover {
         img {
           opacity: 1;
           filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
+// Sound
+#sound {
+  a {
+    background: $labomba-amarelo;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 2em;
+    position: fixed;
+    z-index: 999;
+
+    i {
+      color: #000;
+      font-size: rem(25);
+      padding-top: 0.2em;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Modal Contato
+.modal {
+  &-dialog-centered {
+    max-width: 80vw;
+  }
+
+  &-content {
+    background-color: #000;
+    background-image: url(../img/form_madre.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    .modal {
+      &-header {
+        border: none;
+
+        .close {
+          color: $labomba-amarelo;
+          text-shadow: none;
+          opacity: 1;
+          transition: all 0.4s ease;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      &-body {
+        #zap {
+          position: relative;
+          top: 50%;
+          max-width: 190px;
+        }
+
+        h3 {
+          font-family: "OCR A Std";
+          font-size: rem(45);
+          text-indent: -0.1em;
+          color: $labomba-amarelo;
+        }
+
+        p {
+          font-size: rem(20);
+        }
+
+        form {
+          .form-group {
+            input,
+            textarea {
+              background-color: #000;
+              border: 1px solid #999999;
+              border-radius: 0;
+              padding: 1em;
+              color: white;
+
+              &::placeholder {
+                color: #999999;
+              }
+            }
+          }
+
+          button{
+            background: none;
+            border: none;
+            font-family: "OCR A Std";
+            color: $labomba-amarelo;
+            display: block;width: 100%;
+
+            &:hover{
+              color: $labomba-rosa;
+            }
+          }
         }
       }
     }
