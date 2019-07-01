@@ -23,7 +23,7 @@
 }
 
 @function rem($pixels) {
-  @return $pixels / 16 + rem;
+  @return $pixels / 16+rem;
 }
 
 // Variaveis
@@ -230,6 +230,12 @@ main {
 
 footer {
   margin-top: 5em;
+
+  &::before {
+    content: url(../img/footer_labomba_bar.png);
+    position: absolute;
+    right: 80%;
+  }
 
   p {
     margin-top: 3em;
@@ -504,10 +510,8 @@ footer {
 
   &-lulupulus {
     #infos {
-      background: linear-gradient(
-        rgba(0, 25, 77, 1) 0%,
-        rgba(2, 93, 193, 1) 100%
-      ) !important;
+      background: linear-gradient(rgba(0, 25, 77, 1) 0%,
+          rgba(2, 93, 193, 1) 100%) !important;
     }
 
     &::before {
@@ -664,15 +668,20 @@ footer {
       &-body {
         #zap {
           position: relative;
-          top: 50%;
-          max-width: 190px;
+          top: 20%;
+          right: 15%;
+
+          img {
+            max-width: 200px;
+          }
         }
 
         h3 {
           font-family: "OCR A Std";
-          font-size: rem(45);
+          font-size: rem(48);
           text-indent: -0.1em;
           color: $labomba-amarelo;
+          margin-top: 1em;
         }
 
         p {
@@ -681,6 +690,7 @@ footer {
 
         form {
           .form-group {
+
             input,
             textarea {
               background-color: #000;
@@ -695,14 +705,16 @@ footer {
             }
           }
 
-          button{
+          button {
             background: none;
             border: none;
             font-family: "OCR A Std";
             color: $labomba-amarelo;
-            display: block;width: 100%;
+            display: block;
+            width: 100%;
+            margin: 3em 0;
 
-            &:hover{
+            &:hover {
               color: $labomba-rosa;
             }
           }
