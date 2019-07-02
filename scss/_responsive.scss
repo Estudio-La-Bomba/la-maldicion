@@ -1,267 +1,392 @@
-// iPad Pro (12Inch)
-@media (max-width: 1025px) {
-
-  // LaBomba
-  #labomba {
-    .lead {
-      font-size: 16px;
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 500px) {
+    #fp-nav {
+        display: none;
     }
 
-    .cases {
-      .case {
-        width: (100% / 3);
-        height: 400px;
-      }
-    }
-  }
+    main {
+        text-align: center;
 
-  #cta {
-    h2 {
-      padding-top: 0.5em;
+        #logo {
+            padding: 2em 0;
+            max-width: 100px;
+        }
+
+        #madre {
+            max-width: 150px;
+        }
+
+        #introducao {
+            padding-left: 1em;
+
+            #infos {
+                padding-top: rem(20);
+
+                h1 {
+                    font-size: rem(30);
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 16px;
+                }
+            }
+
+            #antidote {
+                padding-top: 1em;
+
+                a {
+                    display: inline-flex;
+                }
+            }
+        }
     }
-  }
+
+    // Cervejas
+    #cervejas {
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .cerveja {
+            h2 {
+                font-size: 0;
+
+                span {
+                    font-size: 0;
+                }
+            }
+
+            a {
+                img {
+                    max-height: 250px;
+                    margin-top: -3em;
+                }
+            }
+        }
+    }
+
+    // Footer
+    #conversa {
+        margin: 0.5em 0;
+
+        a {
+            h2 {
+                font-size: rem(25);
+            }
+
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+
+    footer {
+        .home {
+            margin-top: 0;
+        }
+
+        .interno {
+            .container-fluid {
+                padding-right: 15px;
+            }
+
+            p {
+                margin-top: 2em;
+                font-size: 1em;
+            }
+
+            #infos {
+                padding: 1em 0;
+            }
+
+            #creditos {
+                margin-bottom: 2em;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        #infos {
+            display: block;
+            text-align: center;
+            margin-bottom: 1em;
+
+            li {
+                padding: 0.3em 0;
+                font-size: 13px;
+            }
+
+            #social {
+                margin-left: 0;
+
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    // Page Cervejas
+    .page-cerveja {
+        margin-top: 0;
+
+        .cerva {
+            text-align: center;
+
+            img {
+                max-width: 200px;
+            }
+        }
+
+        .introducao {
+            margin-top: 2em;
+        }
+
+        .arca {
+            position: absolute;
+            top: -70em;
+            left: -4em;
+        }
+    }
+
+    // Divider
+    .divider {
+        margin-top: 1em;
+    }
+
+    // Apresentação
+    .apresentacao {
+        margin-top: -1em;
+        background-color: $amarelo;
+
+        .ilustracao {
+            padding-top: 5em;
+        }
+
+        .cerveja-detail {
+            padding: 1em 0;
+        }
+    }
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  main {
-    background-size: contain;
-    height: auto;
+    main {
+        margin-top: -10em;
 
-    #madre {
-      height: 550px;
-      right: 17%;
-    }
-
-    #infos {
-      padding-top: 3em;
-
-      #logo {
-        margin-top: 1em;
-      }
-    }
-  }
-
-  #cervejas {
-    background-size: cover;
-    height: auto;
-    padding-top: 0em;
-    padding-bottom: 2em;
-    margin-top: -2em;
-
-    .cerveja {
-      h2 {
-        left: 30%;
-      }
-
-      a {
-        img {
-          max-width: 110px;
+        #madre {
+            max-width: 300px;
+            margin-top: 10em;
         }
-      }
-    }
-  }
 
-  // LaBomba
-  #labomba {
-    .lead {
-      font-size: 16px;
-    }
-
-    .cases {
-      .case {
-        width: (100% / 3);
-        height: 400px;
-      }
-    }
-  }
-
-  #cta {
-    h2 {
-      padding-top: 0.5em;
-    }
-  }
-
-  .page-cerveja {
-    @mixin Posicao {
-      left: 50%;
-      top: -35%;
-    }
-
-    .madre {
-
-      &-hellcat,
-      &-psico,
-      &-lulupulus,
-      &-mclovin {
-        &::before {
-          @include Posicao();
+        #introducao {
+            padding-left: 1em;
         }
-      }
     }
 
-    h2 {
-      font-size: 4em;
-      line-height: 0.7em;
 
-      span {
-        font-size: 0.5em;
-      }
-    }
-  }
-
-  .apresentacao {
-    margin-top: -7em;
-
-    #infos {
-      margin-top: -1em;
-      padding: 3em 0;
-    }
-
-    .cerveja-detail {
-      .icon {
-        width: auto;
-
-        img {
-          max-width: 40px;
-          padding-bottom: 1.5em;
-        }
-      }
-
-      .infos {
-        width: 100%;
-
-        p {
-          font-size: 14px;
-        }
+    // Cervejas
+    #cervejas {
 
         h3 {
-          font-size: 0.8rem;
+            font-size: 16px;
         }
-      }
+
+        .cerveja {
+
+            h2 {
+                top: 3%;
+            }
+
+            a {
+                img {
+                    max-height: 350px;
+                }
+            }
+
+            &:hover {
+                h2 {
+                    left: 60%;
+                    opacity: 1;
+                }
+            }
+        }
     }
-  }
+
+    footer {
+        .home {
+            margin-top: 2em;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .interno {
+            margin-top: -9em;
+
+            .container-fluid {
+                padding-right: 15px;
+            }
+
+            p {
+                margin-top: 4.5em;
+                font-size: 1em;
+            }
+
+            #infos {
+                padding: 1em 0;
+            }
+
+            #creditos {
+                margin-bottom: 2em;
+            }
+
+            &::before {
+                content: none;
+            }
+
+            .equipe {
+                padding-left: 0;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        #infos {
+            display: block;
+            text-align: center;
+            margin-bottom: 1em;
+
+            li {
+                padding: 0.3em 0;
+                font-size: 13px;
+            }
+
+            #social {
+                margin-left: 0;
+
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    // Page Cervejas
+    .page-cerveja {
+        .cerva {
+            text-align: center;
+
+            img {
+                max-width: 250px;
+            }
+        }
+
+        .introducao {
+            margin-top: 2em;
+
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    // Divider
+    .divider {
+        margin-top: -5em;
+    }
+
+    // Apresentação
+    .apresentacao {
+        .ilustracao {
+            padding-top: 6em;
+        }
+
+        .cerveja-detail {
+            display: inline-block;
+
+            img {
+                margin-bottom: 1em;
+            }
+        }
+    }
 }
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  main {
-    background-size: contain;
-    height: auto;
+// iPad Pro (12Inch)
+@media (max-width: 1025px) {
+    footer {
+        .home {
+            &::before {
+                right: 90%;
+            }
 
-    #madre {
-      height: 370px;
-      right: 0%;
-      left: 6%;
-    }
-  }
-
-  #cervejas {
-    background-size: cover;
-    height: auto;
-
-    .lead {
-      padding-top: 3em;
-    }
-
-    .cerveja {
-      h2 {
-        font-size: 25px;
-        left: 20%;
-        top: 38%;
-
-        span {
-          font-size: rem(15);
+            p {
+                margin-top: 1.6em;
+                font-size: 1em;
+            }
         }
-      }
 
-      a {
-        img {
-          max-width: 90px;
-          margin-left: 1em;
+        .interno {
+            margin-top: -9em;
+
+            .container-fluid {
+                padding-right: 15px;
+            }
+
+            p {
+                margin-top: 4.5em;
+                font-size: 1em;
+            }
+
+            #logo {
+                max-width: 300px;
+            }
+
+            #infos {
+                padding: 1em 0;
+            }
+
+            #creditos {
+                margin-bottom: 2em;
+            }
+
+            &::before {
+                content: none;
+            }
+
+            .equipe {
+                padding-left: 0;
+            }
         }
-      }
-    }
-  }
 
-  // LaBomba
-  #labomba {
-    .cases {
-      position: relative;
-      right: 5%;
-
-      .case {
-        width: (110% / 3);
-        height: 400px;
-        transform: skew(0deg);
-      }
-    }
-  }
-
-  // Call to Action
-  #cta {
-    padding: 2em 0;
-
-    h2 {
-      line-height: rem(80);
-    }
-  }
-
-  // Rodapé
-  footer {
-    margin-top: 0;
-
-    form {
-      padding-bottom: 5em;
-    }
-
-    img {
-      width: 200px;
-    }
-  }
-
-  .page-cerveja {
-    img {
-      max-height: 550px;
-    }
-
-    .madre {
-
-      &-hellcat,
-      &-psico,
-      &-lulupulus,
-      &-mclovin {
-        &::before {
-          content: none;
+        p {
+            font-size: 12px;
+            text-align: justify;
         }
-      }
+
+        #infos {
+
+            li {
+                padding: .8em 2em;
+                font-size: 10px;
+            }
+
+            #social {
+                margin-left: 0;
+
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
     }
-
-    h2 {
-      font-size: 5em;
-
-      span {
-        font-size: 0.5em;
-      }
-    }
-  }
-
-  .apresentacao {
-    margin-top: 4em;
-
-    #infos {
-      margin-top: -1em;
-    }
-
-    .spotify {
-      h3 {
-        font-size: 2em;
-        padding-top: 0.3em;
-      }
-    }
-
-    .cerveja-detail {
-      padding: 1em 0.8em;
-    }
-  }
 }

@@ -50,208 +50,338 @@
     <script src="https://kit.fontawesome.com/7ca1ebb48c.js"></script>
   </head>
   <body>
+    <!-- Sound -->
+    <div id="sound">
+      <audio id="music" autoplay>
+        <source src="../assets/sounds/mclovin.mp3" type="audio/mpeg" />
+      </audio>
+      <a
+        href="javascript:void(0)"
+        class="btn btn-default"
+        title="Play/Pause"
+        onclick="aud_play_pause()"
+      >
+        <i id="stateicon" class="fa fa-pause"></i>
+      </a>
+    </div>
+
     <!-- Introdução -->
     <main class="page-cerveja">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-7 text-center">
+        <div class="row">
+          <!-- Estúdio LaBomba -->
+          <div class="col-12">
+            <div class="text-center d-block d-md-none">
+              <a href="https://estudiolabomba.com" target="blank">
+                <img
+                  src="../assets/img/labomba.svg"
+                  alt="Estúdio LaBomba"
+                  class="img-fluid py-5"
+                  width="200px"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Ceveja McLovin ESB -->
+          <div class="col-12 col-md-5 cerva">
             <img
-              src="../assets/img/cervejas/mclovin-esb-big.png"
+              src="../assets/img/cervejas/mclovin-esb.png"
               alt="Cerveja McLovin ESB"
-              height="830"
+              width="340"
             />
           </div>
-          <div class="col-md-5 col-12" id="mclovin">
-            <a href="/" class="madre madre-mclovin">
-              <img
-                src="../assets/img/madre_de_labomba.png"
-                alt="Madre de LaBomba"
-                class="img-fluid"
-                width="220"
-              />
-            </a>
-            <h1>la maldición</h1>
+
+          <!-- Introdução -->
+          <div class="col-md-5 col-12 introducao" id="mclovin">
+            <h2>
+              <span>McLovin</span><br />
+              ESB
+            </h2>
             <p>
               Abandonado ainda filhote, passando frio, fome e ódio nas ruas,
               McLovin se entrega com intensidade, oferecendo o sabor amargo de
               seu puro malte preferido. Beba até o fim ou esse cão irá arrancar
               até suas vísceras quando estiver de passagem nas madrugadas frias
               de San Andreas.
+              <br />
+              Foi o cão que botou pra “nóis” beber.
             </p>
-            <p>Foi o cão que botou pra “nóis” beber.</p>
-            <h2>
-              <span>McLovin</span><br />
-              ESB
-            </h2>
+
+            <!-- Playlist Spotify -->
+            <div class="spotify">
+              <a href="http://spoti.fi/2UcOn8S" target="blank">
+                <img
+                  src="../assets/img/cervejas/details/spotify-mclovin.svg"
+                  alt="Spotify"
+                  class="img-fluid"
+                  width="80"
+                />
+              </a>
+              <a href="http://spoti.fi/2UcOn8S" target="blank">
+                <div class="text-left" id="hellcat">
+                  <h3>McLovin ESB</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="text-right d-none d-md-block">
+              <a href="https://estudiolabomba.com" target="blank">
+                <img
+                  src="../assets/img/labomba.svg"
+                  alt="Estúdio LaBomba"
+                  class="img-fluid"
+                  width="200px"
+                />
+              </a>
+            </div>
+            <img
+              src="../assets/img/cervejas/details/arca_marrom.svg"
+              alt="McLovin ESB"
+              height="500"
+              class="arca"
+            />
           </div>
         </div>
       </div>
     </main>
 
-    <!-- Informações e Ilustração da Cerveja HellCat IPA -->
-    <section class="apresentacao">
-      <div class="apresentacao-mclovin">
-        <div id="infos">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-5 offset-md-7 col-12">
-                <!-- Playlist Spotify -->
-                <div class="spotify">
-                  <a href="http://spoti.fi/2UcOn8S" target="blank">
-                    <img
-                      src="../assets/img/cervejas/details/spotify-mclovin.svg"
-                      alt="Spotify"
-                      class="img-fluid"
-                      width="80"
-                    />
-                  </a>
-                  <div class="info text-left">
-                    <h3>McLovin ESB</h3>
-                    <a href="http://spoti.fi/2UcOn8S" target="blank"
-                      >spoti.fi/2UcOn8S</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row" id="informacoes">
-              <div class="col-12 text-center">
+    <!-- Informações e Ilustração da Cerveja McLovin ESB -->
+    <div class="divider divider-mclovin">
+      <section class="apresentacao apresentacao-mclovin">
+        <!-- Ilustração -->
+        <div class="ilustracao">
+          <img
+            src="../assets/img/cervejas/mclovin-esb-ilustracao.svg"
+            alt="McLovin ESB Ilustração feita pelo Estúdio LaBomba"
+          />
+        </div>
+
+        <!-- Descrição da cerveja, como a sua cor, amargor e qual comida combina -->
+        <div class="container">
+          <div class="row cerveja-detail-mclovin">
+            <!-- Cor da Breja (EBC) -->
+            <div class="col-md-4 col-12 cerveja-detail">
+              <div class="col-3">
                 <img
-                  src="../assets/img/cervejas/mclovin-esb-ilustracao.svg"
-                  alt="McLovin ESB Ilustração"
-                  class="img-fluid"
-                  width="900"
+                  src="../assets/img/cervejas/details/eye-mclovin.svg"
+                  alt="Cor da Breja"
+                  height="58"
                 />
               </div>
+              <div class="col-9">
+                <h3>cor da breja (EBC)</h3>
+                <div class="graphic">
+                  <span>18,5</span>
+                  <div class="bar">
+                    <div class="size size-18"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="row">
-              <div class="col-md-4 cerveja-detail">
-                <div class="icon">
-                  <img
-                    src="../assets/img/cervejas/details/eye-mclovin.svg"
-                    alt="Cor da Breja"
-                    height="70"
-                  />
-                </div>
-                <div class="infos">
-                  <h3>Cor da breja (EBC)</h3>
-                  <div class="graphic">
-                    <span>18,5</span>
-                    <div class="bar-18"></div>
+
+            <!-- Amargor da breja (IBU) -->
+            <div class="col-md-4 col-12 cerveja-detail">
+              <div class="col-3">
+                <img
+                  src="../assets/img/cervejas/details/cevada-mclovin.svg"
+                  alt="Amargor da Breja"
+                  height="58"
+                />
+              </div>
+              <div class="col-9">
+                <h3>amargor da breja (IBU)</h3>
+                <div class="graphic">
+                  <span>43</span>
+                  <div class="bar">
+                    <div class="size size-43"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 cerveja-detail">
-                <div class="icon">
-                  <img
-                    src="../assets/img/cervejas/details/cevada-mclovin.svg"
-                    alt="Amargor da Breja"
-                    height="70"
-                  />
-                </div>
-                <div class="infos">
-                  <h3>Amargor da breja (IBU)</h3>
-                  <div class="graphic">
-                    <span>43</span>
-                    <div class="bar-43"></div>
-                  </div>
-                </div>
+            </div>
+
+            <!-- Comidas -->
+            <div class="col-md-4 col-12 cerveja-detail">
+              <div class="col-3">
+                <img
+                  src="../assets/img/cervejas/details/food-mclovin.svg"
+                  alt="Comida"
+                  height="58"
+                />
               </div>
-              <div class="col-md-4 cerveja-detail">
-                <div class="icon">
-                  <img
-                    src="../assets/img/cervejas/details/food-mclovin.svg"
-                    alt="Comida"
-                    height="70"
-                  />
-                </div>
-                <div class="infos">
-                  <p>
-                    Vai bem com kbab, carpaccio, carne assada e falafel.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 cerveja-detail">
-                <p class="lead">
-                  Conheça as outras criaturas amaldiçoadas &#8628;
+              <div class="col-9">
+                <p>
+                  Vai bem com kbab, carpaccio, carne assada e falafel.
                 </p>
               </div>
             </div>
+
+            <!-- Outras Criaturas amaldiçoadas -->
+            <div class="col-12 cerveja-detail">
+              <p class="lead">
+                Conheça as outras criaturas amaldiçoadas &#8628;
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Rodapé -->
-    <footer class="next">
+    <!-- Conheça as outras criaturas amaldiçoadas -->
+    <div class="next">
       <div class="container-fluid">
         <div class="row">
-          <div class="col">
-            <a href="hellcat">
-              <img
-                src="../assets/img/cervejas/next/hellcat.jpg"
-                alt="Cerveja HellCat IPA"
-                class="img-fluid"
-              />
-            </a>
-          </div>
-          <div class="col">
-            <a href="psico">
-              <img
-                src="../assets/img/cervejas/next/psico.jpg"
-                alt="Cerveja Psico Weizen"
-                class="img-fluid"
-              />
-            </a>
-          </div>
-          <div class="col">
+          <div class="item">
             <a href="lulupulus">
               <img
                 src="../assets/img/cervejas/next/lulupulus.jpg"
                 alt="Cerveja Lulupulus Red Ale"
-                class="img-fluid"
               />
             </a>
+          </div>
+          <div class="item">
+            <a href="psico">
+              <img
+                src="../assets/img/cervejas/next/psico.jpg"
+                alt="Cerveja Psico Weizen"
+              />
+            </a>
+          </div>
+          <div class="item">
+            <a href="hellcat">
+              <img
+                src="../assets/img/cervejas/next/hellcat.jpg"
+                alt="Cerveja HellCat IPA"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estúdio LaBomba -->
+    <footer>
+      <div class="interno">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-center pt-5">
+              <div id="conversa">
+                <a href="#!" class="d-block d-md-none">
+                  <img
+                    src="../assets/img/mclovin_bater_um_papo.svg"
+                    alt="Vamos bater um papo ?"
+                    class="img-fluid"
+                    width="165"
+                  />
+                  <h2>
+                    vamos bater <br />
+                    um papo?
+                  </h2>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 text-right d-none d-md-block" id="logo">
+              <a href="https://estudiolabomba.com" target="blank">
+                <img
+                  src="../assets/img/labomba_completa.svg"
+                  alt="Estúdio LaBomba"
+                  class="img-fluid logo"
+                  width="230"
+                />
+              </a>
+            </div>
+            <div class="col-md-8 col-12 d-none d-md-block">
+              <p>
+                Somos um Estúdio de Design. Há 6 anos, elevamos o potencial e
+                resultados dos nossos clientes gerando ligação emocional dos
+                consumidores com as marcas, através da ousadia, arte e design.
+              </p>
+            </div>
+            <div class="col-12 d-none d-md-block">
+              <img
+                src="../assets/img/equipe_labomba.svg"
+                alt="Equipe do Estúdio LaBomba"
+                class="img-fluid equipe"
+              />
+            </div>
+            <div class="col-12 text-center">
+              <ul id="infos">
+                <li>
+                  <span>Onde?</span>Avenida Itamarati, 878 - Santo André / SP
+                </li>
+                <li>
+                  <a href="https://estudiolabomba.com">estudiolabomba.com</a>
+                </li>
+                <li>+55 11 2896 5199</li>
+                <ul id="social">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/estudio.labomba/"
+                      target="blank"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.behance.net/estudiolabomba"
+                      target="blank"
+                    >
+                      <i class="fab fa-behance"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/estudiolabomba"
+                      target="blank"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/est%C3%BAdio-la-bomba/about/"
+                      target="blank"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://vimeo.com/user34771087" target="blank">
+                      <i class="fab fa-vimeo-v"></i>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="col-12 text-center" id="creditos">
+              &#x24B8; 2013 - 2019 La.Bomba <br />
+              <a href="https://estudiolabomba.com/">Estúdio La.Bomba</a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Call to Action -->
-    <section id="cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9 col-sm-12">
-            <h2>vamos bater um papo ?</h2>
-            <p>
-              Curtiu? Vamos bater um papo por WhatsApp ou nos mande um e-mail
-              através do Formulário abaixo.
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-12 text-center">
-            <a
-              href="https://briefing.estudiolabomba.com/"
-              target="blank"
-              class="link"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <p>
-              Converse conosco pelo
-              <a
-                href="https://briefing.estudiolabomba.com/"
-                target="blank"
-                class="link"
-                >WhatsApp</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Scripts -->
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+      // Play/Pause
+      function aud_play_pause() {
+        var myAudio = document.getElementById("music");
+        if (myAudio.paused) {
+          $("#stateicon").removeClass("fa fa-play");
+          $("#stateicon").addClass("fa fa-pause");
+          myAudio.play();
+        } else {
+          $("#stateicon").removeClass("fa fa-pause");
+          $("#stateicon").addClass("fa fa-play");
+          myAudio.pause();
+        }
+      }
+    </script>
   </body>
 </html>

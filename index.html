@@ -64,7 +64,7 @@
   </head>
   <body>
     <!-- Sound -->
-    <div id="sound">
+    <!-- <div id="sound">
       <audio id="music" autoplay>
         <source src="./assets/sounds/madre_de_la_bomba.mp3" type="audio/mpeg" />
       </audio>
@@ -76,7 +76,7 @@
       >
         <i id="stateicon" class="fa fa-pause"></i>
       </a>
-    </div>
+    </div> -->
 
     <div id="fullpage">
       <!-- Introdução -->
@@ -85,7 +85,18 @@
           <main>
             <div class="container">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-12">
+                  <div class="text-center d-block d-md-none">
+                    <a href="https://estudiolabomba.com" target="blank">
+                      <img
+                        src="assets/img/labomba.svg"
+                        alt="Estúdio LaBomba"
+                        class="img-fluid"
+                        width="200px"
+                        id="logo"
+                      />
+                    </a>
+                  </div>
                   <img
                     src="assets/img/madre_de_labomba.png"
                     alt="Madre de LaBomba"
@@ -93,8 +104,8 @@
                     class="img-fluid"
                   />
                 </div>
-                <div class="col-md-6" id="introducao">
-                  <div class="text-right">
+                <div class="col-md-6 col-12" id="introducao">
+                  <div class="text-right d-none d-md-block">
                     <a href="https://estudiolabomba.com" target="blank">
                       <img
                         src="assets/img/labomba.svg"
@@ -106,9 +117,12 @@
                     </a>
                   </div>
                   <div id="infos">
-                    <h1>
+                    <h1 class="d-none d-md-block">
                       La <br />
                       Maldición
+                    </h1>
+                    <h1 class="d-block d-md-none">
+                      La Maldición
                     </h1>
                     <p>
                       Reza a lenda de quem receber uma maldição da Madre De
@@ -196,6 +210,9 @@
       <div class="section">
         <section id="la-maldicion-teaser">
           <div class="container">
+            <div class="d-block d-md-none">
+              <h3>Veja o Teaser da Maldição!</h3>
+            </div>
             <div class="embed-responsive embed-responsive-16by9">
               <video
                 controls="true"
@@ -221,7 +238,7 @@
               <div class="col-12 text-center">
                 <h3>clique nas cervejas e descubra</h3>
               </div>
-              <div class="col-6 col-md-3 cerveja" id="hellcat">
+              <div class="col-6 col-lg-3 cerveja" id="hellcat">
                 <h2><span>HellCat</span><br />IPA</h2>
                 <a href="cervejas/hellcat">
                   <img
@@ -231,8 +248,8 @@
                   />
                 </a>
               </div>
-              <div class="col-6 col-md-3 cerveja" id="lulupulus">
-                <h2><span>Lulupulus</span><br />Red Ale</h2>
+              <div class="col-6 col-lg-3 cerveja" id="lulupulus">
+                <h2><span>Lulupulus</span><br />RedAle</h2>
                 <a href="cervejas/lulupulus">
                   <img
                     src="./assets/img/cervejas/lulupulus-red-ale-la-maldicion.png"
@@ -241,7 +258,7 @@
                   />
                 </a>
               </div>
-              <div class="col-6 col-md-3 cerveja" id="mclovin">
+              <div class="col-6 col-lg-3 cerveja" id="mclovin">
                 <h2><span>McLovin</span><br />ESB</h2>
                 <a href="cervejas/mclovin">
                   <img
@@ -251,7 +268,7 @@
                   />
                 </a>
               </div>
-              <div class="col-6 col-md-3 cerveja" id="psico">
+              <div class="col-6 col-lg-3 cerveja" id="psico">
                 <h2>
                   <span>Psico</span><br />
                   Weizen
@@ -275,14 +292,29 @@
           <!-- Vamos baterum papo? -->
           <div class="row">
             <div class="col-12 text-center" id="conversa">
-              <a data-toggle="modal" data-target="#exampleModalCenter">
+              <a href="#!" class="d-block d-md-none">
                 <img
                   src="./assets/img/mclovin_bater_um_papo.svg"
                   alt="Vamos bater um papo ?"
                   class="img-fluid"
                   width="165"
                 />
-
+                <h2>
+                  vamos bater <br />
+                  um papo?
+                </h2>
+              </a>
+              <a
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+                class="d-none d-md-block"
+              >
+                <img
+                  src="./assets/img/mclovin_bater_um_papo.svg"
+                  alt="Vamos bater um papo ?"
+                  class="img-fluid"
+                  width="165"
+                />
                 <h2>
                   vamos bater <br />
                   um papo?
@@ -293,89 +325,94 @@
 
           <!-- Estúdio LaBomba -->
           <footer>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-4 col-12 text-right" id="logo">
-                  <a href="https://estudiolabomba.com" target="blank">
+            <div class="home">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 col-md-4 text-right" id="logo">
+                    <a href="https://estudiolabomba.com" target="blank">
+                      <img
+                        src="./assets/img/labomba_completa.svg"
+                        alt="Estúdio LaBomba"
+                        class="img-fluid"
+                        width="230"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <p>
+                      Somos um Estúdio de Design. Há 6 anos, elevamos o
+                      potencial e resultados dos nossos clientes gerando ligação
+                      emocional dos consumidores com as marcas, através da
+                      ousadia, arte e design.
+                    </p>
+                  </div>
+                  <div class="col-12 py-4 d-none d-md-block">
                     <img
-                      src="./assets/img/labomba_completa.svg"
-                      alt="Estúdio LaBomba"
+                      src="./assets/img/equipe_labomba.svg"
+                      alt="Equipe do Estúdio LaBomba"
                       class="img-fluid"
-                      width="230"
                     />
-                  </a>
-                </div>
-                <div class="col-md-8 col-12">
-                  <p>
-                    Somos um Estúdio de Design. Há 6 anos, elevamos o potencial
-                    e resultados dos nossos clientes gerando ligação emocional
-                    dos consumidores com as marcas, através da ousadia, arte e
-                    design.
-                  </p>
-                </div>
-                <div class="col-12 py-4">
-                  <img
-                    src="./assets/img/equipe_labomba.svg"
-                    alt="Equipe do Estúdio LaBomba"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="col-12">
-                  <ul id="infos">
-                    <li>
-                      <span>Onde?</span>Avenida Itamarati, 878 - Santo André /
-                      SP
-                    </li>
-                    <li>
-                      <a href="https://estudiolabomba.com"
-                        >estudiolabomba.com</a
-                      >
-                    </li>
-                    <li>+55 11 2896 5199</li>
-                    <ul id="social">
+                  </div>
+                  <div class="col-12">
+                    <ul id="infos">
                       <li>
-                        <a
-                          href="https://www.instagram.com/estudio.labomba/"
-                          target="blank"
+                        <span>Onde?</span>Avenida Itamarati, 878 - Santo André /
+                        SP
+                      </li>
+                      <li>
+                        <a href="https://estudiolabomba.com"
+                          >estudiolabomba.com</a
                         >
-                          <i class="fab fa-instagram"></i>
-                        </a>
                       </li>
-                      <li>
-                        <a
-                          href="https://www.behance.net/estudiolabomba"
-                          target="blank"
-                        >
-                          <i class="fab fa-behance"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.facebook.com/estudiolabomba"
-                          target="blank"
-                        >
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/company/est%C3%BAdio-la-bomba/about/"
-                          target="blank"
-                        >
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://vimeo.com/user34771087" target="blank">
-                          <i class="fab fa-vimeo-v"></i>
-                        </a>
-                      </li>
+                      <li>+55 11 2896 5199</li>
+                      <ul id="social">
+                        <li>
+                          <a
+                            href="https://www.instagram.com/estudio.labomba/"
+                            target="blank"
+                          >
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.behance.net/estudiolabomba"
+                            target="blank"
+                          >
+                            <i class="fab fa-behance"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.facebook.com/estudiolabomba"
+                            target="blank"
+                          >
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/company/est%C3%BAdio-la-bomba/about/"
+                            target="blank"
+                          >
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://vimeo.com/user34771087"
+                            target="blank"
+                          >
+                            <i class="fab fa-vimeo-v"></i>
+                          </a>
+                        </li>
+                      </ul>
                     </ul>
-                  </ul>
-                </div>
-                <div class="col-12 text-center" id="creditos">
-                  &#x24B8; 2013 - 2019 La.Bomba <br />
-                  <a href="https://estudiolabomba.com/">Estúdio La.Bomba</a>
+                  </div>
+                  <div class="col-12 text-center" id="creditos">
+                    &#x24B8; 2013 - 2019 La.Bomba <br />
+                    <a href="https://estudiolabomba.com/">Estúdio La.Bomba</a>
+                  </div>
                 </div>
               </div>
             </div>

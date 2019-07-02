@@ -27,11 +27,11 @@
 }
 
 // Variaveis
-$marron: #d09a3b;
-$amarelo: #fcc217;
-$laranja: #e9481e;
+$marron: #e3a02a;
+$amarelo: #ffcb00;
+$laranja: #e54320;
 $vermelho: #e32313;
-$verde: #69c494;
+$verde: #60ea60;
 $azul: #5b78bb;
 $azul-agua: #62b4ac;
 $azul-mclovin: #1e525a;
@@ -119,41 +119,49 @@ main {
 }
 
 #hellcat {
-  h2 {
+
+  h2,
+  h3 {
     color: $vermelho;
 
     span {
-      color: $amarelo;
+      color: #fff;
     }
   }
 }
 
 #lulupulus {
-  h2 {
+
+  h2,
+  h3 {
     color: $verde;
 
     span {
-      color: $azul;
+      color: #fff;
     }
   }
 }
 
 #mclovin {
-  h2 {
+
+  h2,
+  h3 {
     color: $marron;
 
     span {
-      color: $azul-mclovin;
+      color: #fff;
     }
   }
 }
 
 #psico {
-  h2 {
-    color: $azul;
+
+  h2,
+  h3 {
+    color: $laranja;
 
     span {
-      color: $laranja;
+      color: #fff;
     }
   }
 }
@@ -168,7 +176,7 @@ main {
       transform: rotate(270deg);
       text-align: right;
       position: absolute;
-      left: 0%;
+      left: 50%;
       top: 2%;
       z-index: -1;
       opacity: 0;
@@ -220,6 +228,7 @@ main {
 
     &:hover {
       opacity: 0.7;
+      text-decoration: none;
 
       h2 {
         color: $labomba-rosa;
@@ -229,12 +238,50 @@ main {
 }
 
 footer {
-  margin-top: 5em;
+  .home {
+    margin-top: 5em;
 
-  &::before {
-    content: url(../img/footer_labomba_bar.png);
-    position: absolute;
-    right: 80%;
+    &::before {
+      content: url(../img/footer_labomba_bar.png);
+      position: absolute;
+      right: 83%;
+    }
+  }
+
+  .interno {
+    &::before {
+      content: url(../img/footer_labomba_bar.png);
+      position: absolute;
+      right: 83%;
+    }
+
+    .container-fluid {
+      padding-right: 6.5em;
+    }
+
+    .logo {
+      margin-top: 3em;
+    }
+
+    p {
+      margin-top: 5.2em;
+      font-size: rem(18);
+    }
+
+    #infos {
+      font-size: rem(16);
+      padding-top: 2em;
+      padding-bottom: 2em;
+      padding-left: 5em;
+    }
+
+    .equipe {
+      padding-left: 8em;
+    }
+
+    #creditos {
+      font-size: rem(14);
+    }
   }
 
   p {
@@ -270,7 +317,7 @@ footer {
     #social {
       list-style: none;
       display: inline-flex;
-      color: $labomba-amarelo;
+
       margin-left: 2.5em;
       padding: 0;
 
@@ -280,6 +327,11 @@ footer {
 
         i {
           transition: all 0.4s ease;
+          color: $labomba-amarelo;
+
+          &:hover {
+            color: #999999;
+          }
         }
       }
     }
@@ -303,168 +355,65 @@ footer {
 
 // Page Cervejas
 .page-cerveja {
-  overflow: revert;
+  margin-top: 4em;
 
-  img {
-    margin-top: 3em;
+  .cerva {
+    text-align: right;
   }
 
-  h2 {
-    font-size: rem(90);
-    line-height: rem(70);
-
-    span {
-      font-size: rem(50);
-    }
-  }
-
-  .madre {
-    @mixin Posicao {
+  .psico {
+    &::after {
+      content: url(../img/cervejas/psico-weizen-folha.png);
       position: absolute;
-      left: 55%;
-      top: -25%;
+      right: 35%;
+      top: 65%;
     }
+  }
 
-    &-hellcat {
-      &::before {
-        content: url(../img/cervejas/details/arca_red.png);
-        @include Posicao();
+  .introducao {
+    margin-top: 13em;
+
+    h2 {
+      font-size: rem(90);
+      line-height: rem(70);
+
+      span {
+        font-size: rem(50);
       }
     }
 
-    &-psico {
-      &::before {
-        content: url(../img/cervejas/details/arca_azul.png);
-        @include Posicao();
-      }
+    p {
+      padding: 1em 0;
+      text-align: justify;
     }
 
-    &-lulupulus {
-      &::before {
-        content: url(../img/cervejas/details/arca_verde.png);
-        @include Posicao();
-      }
-    }
+    .spotify {
+      display: inline-flex;
 
-    &-mclovin {
-      &::before {
-        content: url(../img/cervejas/details/arca_marrom.png);
-        @include Posicao();
+      h3 {
+        font-family: "DIN Alternate Bold";
+        padding: .7em .8em;
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
+  }
+
+  .arca {
+    position: relative;
+    bottom: 15%;
+    right: 35%;
+    z-index: -1;
   }
 }
 
-// Apresentação
-.apresentacao {
-  margin-top: -4em;
-
-  .spotify {
-    font-family: "DIN Alternate Bold";
-    display: inline-flex;
-    margin-top: -3em;
-    color: $vermelho;
-
-    h3 {
-      margin: 0;
-      padding-top: 0.4em;
-    }
-
-    a {
-      color: $vermelho;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    img {
-      margin-right: 1em;
-    }
-  }
-
-  .cerveja-detail {
-    color: black;
-    font-family: Helvetica, sans-serif;
-    display: inherit;
-
-    .lead {
-      font-family: "Bookman Old Style Bold";
-      padding-top: 1em;
-      margin: 0;
-    }
-
-    .icon {
-      width: 100px;
-      height: 100%;
-      margin-right: 1em;
-    }
-
-    h3 {
-      font-weight: 900;
-      font-size: rem(21);
-      font-style: italic;
-    }
-
-    span {
-      color: $vermelho;
-      font-size: rem(25);
-      line-height: rem(20);
-      font-family: "DIN Alternate Bold";
-    }
-
-    .graphic {
-      display: flex;
-      height: 20px;
-      border-right: 3px solid black;
-
-      .bar {
-        margin-left: 1em;
-        height: 20px;
-        background-color: $vermelho;
-
-        &-9 {
-          @extend .bar;
-          width: 9%;
-        }
-
-        &-12 {
-          @extend .bar;
-          width: 12%;
-        }
-
-        &-13 {
-          @extend .bar;
-          width: 13%;
-        }
-
-        &-18 {
-          @extend .bar;
-          width: 18%;
-        }
-
-        &-26 {
-          @extend .bar;
-          width: 26%;
-        }
-
-        &-28 {
-          @extend .bar;
-          width: 28%;
-        }
-
-        &-43 {
-          @extend .bar;
-          width: 43%;
-        }
-
-        &-60 {
-          @extend .bar;
-          width: 60%;
-        }
-      }
-    }
-  }
+// Divider
+.divider {
+  margin-top: -15em;
 
   &-hellcat {
     &::before {
@@ -473,97 +422,119 @@ footer {
   }
 
   &-psico {
-    #infos {
-      background-color: $azul-agua !important;
-    }
-
     &::before {
       content: url(../img/cervejas/details/detail-psico.svg);
-    }
-
-    .spotify {
-      color: $laranja;
-
-      a {
-        color: $laranja;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-
-    .cerveja-detail {
-      color: #4a311c;
-
-      span {
-        color: $laranja;
-      }
-
-      .graphic {
-        .bar {
-          background-color: $azul;
-        }
-      }
-    }
-  }
-
-  &-lulupulus {
-    #infos {
-      background: linear-gradient(rgba(0, 25, 77, 1) 0%,
-          rgba(2, 93, 193, 1) 100%) !important;
-    }
-
-    &::before {
-      content: url(../img/cervejas/details/detail-lulupulus.svg);
-    }
-
-    .spotify {
-      color: $verde;
-
-      a {
-        color: $verde;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-
-    .cerveja-detail {
-      color: #fff;
-
-      span {
-        color: $verde;
-      }
-
-      .graphic {
-        .bar {
-          background-color: $verde;
-        }
-      }
     }
   }
 
   &-mclovin {
-    #infos {
-      background: black !important;
+    &::before {
+      content: url(../img/cervejas/details/detail-mclovin.svg);
     }
+  }
 
-    .spotify {
-      color: $marron;
-      padding-top: 7em;
+  &-lulupulus {
+    &::before {
+      content: url(../img/cervejas/details/detail-lulupulus.svg);
+    }
+  }
+}
 
-      a {
-        color: $marron;
+// Apresentação
+.apresentacao {
+  margin-top: -3em;
+  background-color: $amarelo;
 
-        &:hover {
-          text-decoration: none;
+  .ilustracao {
+    padding-top: 15em;
+    padding-bottom: 5em;
+    text-align: center;
+
+    img {
+      max-width: 80vw;
+    }
+  }
+
+  &-psico {
+    background-color: #62b4ac;
+    background-image: url(../img/cervejas/fundo-psico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-lulupulus {
+    background: linear-gradient(rgba(0, 25, 77, 1) 0%,
+        rgba(2, 93, 193, 1) 100%);
+  }
+
+  &-mclovin {
+    background: #000 !important;
+
+    .ilustracao {
+      padding-top: 3em;
+    }
+  }
+
+  .cerveja-detail {
+
+    font-family: Helvetica, sans-serif;
+    display: inherit;
+
+    &-hellcat {
+      color: black;
+
+      span {
+        color: $vermelho;
+      }
+
+      .graphic {
+        .bar {
+          border-color: $vermelho !important;
+
+          .size {
+            background-color: $vermelho;
+          }
         }
       }
     }
 
-    .cerveja-detail {
+    &-psico {
+      color: black;
+
+      span {
+        color: $laranja;
+      }
+
+      .graphic {
+        .bar {
+          border-color: $laranja !important;
+
+          .size {
+            background-color: $laranja;
+          }
+        }
+      }
+    }
+
+    &-lulupulus {
+      color: #fff;
+
+      span {
+        color: $verde;
+      }
+
+      .graphic {
+        .bar {
+          border-color: $verde !important;
+
+          .size {
+            background-color: $verde;
+          }
+        }
+      }
+    }
+
+    &-mclovin {
       color: #fff;
 
       span {
@@ -572,16 +543,88 @@ footer {
 
       .graphic {
         .bar {
-          background-color: $marron;
+          border-color: $marron !important;
+
+          .size {
+            background-color: $marron;
+          }
         }
       }
     }
-  }
 
-  #infos {
-    background-color: $amarelo;
-    margin-top: -4em;
-    padding: 3em 0;
+    .lead {
+      font-family: "Bookman Old Style Bold";
+      padding: 2em 0;
+      margin: 0;
+    }
+
+    img {
+      padding-right: 1em;
+    }
+
+    h3 {
+      font-weight: 900;
+      font-size: rem(16);
+      font-style: italic;
+      font-family: Helvetica, sans-serif;
+    }
+
+    span {
+      font-size: rem(23);
+      line-height: rem(15);
+      font-family: "DIN Alternate Bold";
+    }
+
+    .graphic {
+      display: flex;
+
+      .bar {
+        border: 1px solid;
+        width: 100%;
+        margin-left: 1em;
+        height: 15px;
+
+        .size {
+          height: 13px;
+
+          &-9 {
+            width: 9%;
+          }
+
+          &-12 {
+            width: 12%;
+
+          }
+
+          &-13 {
+            width: 13%;
+          }
+
+          &-18 {
+            width: 18%;
+          }
+
+          &-26 {
+            width: 26%;
+          }
+
+          &-28 {
+            width: 28%;
+          }
+
+          &-43 {
+            width: 43%;
+          }
+
+          &-60 {
+            width: 60%;
+          }
+        }
+
+      }
+    }
+
+
   }
 
   #informacoes {
@@ -596,12 +639,16 @@ footer {
   margin: 0;
   padding: 0;
 
-  .col {
-    margin: 0;
+  .item {
+    width: (100vw / 3);
     padding: 0;
+    margin: 0;
 
     a {
+      width: (100vw / 3);
+
       img {
+        width: (100vw / 3);
         opacity: 0.7;
         filter: grayscale(50%);
         transition: all 0.5s ease;
