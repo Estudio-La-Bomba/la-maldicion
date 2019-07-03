@@ -1,3 +1,220 @@
+// iPad Pro (12Inch)
+@media (max-width: 1025px) {
+    footer {
+        .home {
+            &::before {
+                right: 90%;
+            }
+
+            p {
+                margin-top: 1.6em;
+                font-size: 1em;
+            }
+        }
+
+        .interno {
+            margin-top: -9em;
+
+            .container-fluid {
+                padding-right: 15px;
+            }
+
+            p {
+                margin-top: 4.5em;
+                font-size: 1em;
+            }
+
+            #logo {
+                max-width: 300px;
+            }
+
+            #infos {
+                padding: 1em 0;
+            }
+
+            #creditos {
+                margin-bottom: 2em;
+            }
+
+            &::before {
+                content: none;
+            }
+
+            .equipe {
+                padding-left: 0;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        #infos {
+
+            li {
+                padding: .8em 2em;
+                font-size: 10px;
+            }
+
+            #social {
+                margin-left: 0;
+
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    main {
+        margin-top: -10em;
+
+        #madre {
+            max-width: 300px;
+            margin-top: 10em;
+        }
+
+        #introducao {
+            padding-left: 1em;
+        }
+    }
+
+
+    // Cervejas
+    #cervejas {
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .cerveja {
+
+            h2 {
+                top: 3%;
+            }
+
+            a {
+                img {
+                    max-height: 350px;
+                }
+            }
+
+            &:hover {
+                h2 {
+                    left: 60%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    footer {
+        .home {
+            margin-top: 2em;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .interno {
+            margin-top: -9em;
+
+            .container-fluid {
+                padding-right: 15px;
+            }
+
+            p {
+                margin-top: 4.5em;
+                font-size: 1em;
+            }
+
+            #infos {
+                padding: 1em 0;
+            }
+
+            #creditos {
+                margin-bottom: 2em;
+            }
+
+            &::before {
+                content: none;
+            }
+
+            .equipe {
+                padding-left: 0;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        #infos {
+            display: block;
+            text-align: center;
+            margin-bottom: 1em;
+
+            li {
+                padding: 0.3em 0;
+                font-size: 13px;
+            }
+
+            #social {
+                margin-left: 0;
+
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    // Page Cervejas
+    .page-cerveja {
+        .cerva {
+            text-align: center;
+
+            img {
+                max-width: 250px;
+            }
+        }
+
+        .introducao {
+            margin-top: 2em;
+
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    // Divider
+    .divider {
+        margin-top: -5em;
+    }
+
+    // Apresentação
+    .apresentacao {
+        .ilustracao {
+            padding-top: 6em;
+        }
+
+        .cerveja-detail {
+            display: inline-block;
+
+            img {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 500px) {
     #fp-nav {
@@ -170,223 +387,6 @@
 
         .cerveja-detail {
             padding: 1em 0;
-        }
-    }
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-    main {
-        margin-top: -10em;
-
-        #madre {
-            max-width: 300px;
-            margin-top: 10em;
-        }
-
-        #introducao {
-            padding-left: 1em;
-        }
-    }
-
-
-    // Cervejas
-    #cervejas {
-
-        h3 {
-            font-size: 16px;
-        }
-
-        .cerveja {
-
-            h2 {
-                top: 3%;
-            }
-
-            a {
-                img {
-                    max-height: 350px;
-                }
-            }
-
-            &:hover {
-                h2 {
-                    left: 60%;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    footer {
-        .home {
-            margin-top: 2em;
-
-            &::before {
-                content: none;
-            }
-        }
-
-        .interno {
-            margin-top: -9em;
-
-            .container-fluid {
-                padding-right: 15px;
-            }
-
-            p {
-                margin-top: 4.5em;
-                font-size: 1em;
-            }
-
-            #infos {
-                padding: 1em 0;
-            }
-
-            #creditos {
-                margin-bottom: 2em;
-            }
-
-            &::before {
-                content: none;
-            }
-
-            .equipe {
-                padding-left: 0;
-            }
-        }
-
-        p {
-            font-size: 12px;
-            text-align: justify;
-        }
-
-        #infos {
-            display: block;
-            text-align: center;
-            margin-bottom: 1em;
-
-            li {
-                padding: 0.3em 0;
-                font-size: 13px;
-            }
-
-            #social {
-                margin-left: 0;
-
-                li {
-                    font-size: 1.5em;
-                }
-            }
-        }
-    }
-
-    // Page Cervejas
-    .page-cerveja {
-        .cerva {
-            text-align: center;
-
-            img {
-                max-width: 250px;
-            }
-        }
-
-        .introducao {
-            margin-top: 2em;
-
-            p {
-                font-size: 0.8em;
-            }
-        }
-    }
-
-    // Divider
-    .divider {
-        margin-top: -5em;
-    }
-
-    // Apresentação
-    .apresentacao {
-        .ilustracao {
-            padding-top: 6em;
-        }
-
-        .cerveja-detail {
-            display: inline-block;
-
-            img {
-                margin-bottom: 1em;
-            }
-        }
-    }
-}
-
-// iPad Pro (12Inch)
-@media (max-width: 1025px) {
-    footer {
-        .home {
-            &::before {
-                right: 90%;
-            }
-
-            p {
-                margin-top: 1.6em;
-                font-size: 1em;
-            }
-        }
-
-        .interno {
-            margin-top: -9em;
-
-            .container-fluid {
-                padding-right: 15px;
-            }
-
-            p {
-                margin-top: 4.5em;
-                font-size: 1em;
-            }
-
-            #logo {
-                max-width: 300px;
-            }
-
-            #infos {
-                padding: 1em 0;
-            }
-
-            #creditos {
-                margin-bottom: 2em;
-            }
-
-            &::before {
-                content: none;
-            }
-
-            .equipe {
-                padding-left: 0;
-            }
-        }
-
-        p {
-            font-size: 12px;
-            text-align: justify;
-        }
-
-        #infos {
-
-            li {
-                padding: .8em 2em;
-                font-size: 10px;
-            }
-
-            #social {
-                margin-left: 0;
-
-                li {
-                    font-size: 1.5em;
-                }
-            }
         }
     }
 }
