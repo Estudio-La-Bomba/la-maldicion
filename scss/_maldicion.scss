@@ -670,7 +670,9 @@ footer {
 
 // Sound
 #sound {
-  a {
+  display: inline-block;
+
+  .pause {
     background: $labomba-amarelo;
     border-radius: 50%;
     width: 50px;
@@ -678,12 +680,25 @@ footer {
     margin: 2em;
     position: fixed;
     z-index: 999;
+    left: 4.5%;
 
     i {
       color: #000;
       font-size: rem(25);
       padding-top: 0.2em;
       margin: 0 auto;
+    }
+  }
+
+  .prev {
+    @extend .pause;
+    left: 0;
+
+    i {
+      color: #000;
+      font-size: rem(35);
+      padding-top: .25em;
+      padding-left: .4em;
     }
   }
 }

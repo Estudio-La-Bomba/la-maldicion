@@ -66,6 +66,17 @@
             }
         }
     }
+
+    // Sound
+    #sound {
+        .pause {
+            left: 6%;
+        }
+
+        .prev {
+            left: 0;
+        }
+    }
 }
 
 // Medium devices (tablets, less than 992px)
@@ -211,6 +222,17 @@
             img {
                 margin-bottom: 1em;
             }
+        }
+    }
+
+    // Sound
+    #sound {
+        .pause {
+            left: 7%;
+        }
+
+        .prev {
+            left: 0;
         }
     }
 }
@@ -396,6 +418,30 @@
 
         .cerveja-detail {
             padding: 1em 0;
+        }
+    }
+
+    // Sound
+    #sound {
+        .pause {
+            width: 40px;
+            height: 40px;
+            margin: 0 .5em;
+            left: 15%;
+
+            i {
+                font-size: rem(20);
+            }
+        }
+
+        .prev {
+            left: 0;
+
+            i {
+                font-size: rem(35);
+                padding-top: .1em;
+                padding-left: .3em;
+            }
         }
     }
 }
