@@ -244,7 +244,7 @@ footer {
     &::before {
       content: url(../img/footer_labomba_bar.png);
       position: absolute;
-      right: 83%;
+      right: 89%;
     }
   }
 
@@ -282,6 +282,10 @@ footer {
     #creditos {
       font-size: rem(14);
     }
+  }
+
+  #logo {
+    text-align: right;
   }
 
   p {

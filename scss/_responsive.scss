@@ -226,7 +226,8 @@
 
         #logo {
             padding: 2em 0;
-            max-width: 100px;
+            max-width: 80px;
+            text-align: center;
         }
 
         #madre {
@@ -320,6 +321,14 @@
 
             #creditos {
                 margin-bottom: 2em;
+            }
+        }
+
+        #logo {
+            text-align: center;
+
+            img {
+                max-width: 150px;
             }
         }
 
