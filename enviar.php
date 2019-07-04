@@ -12,7 +12,8 @@ $header .= "Content-type: text/html; charset=iso-8859-1\n";
 $header .= "From: $email\n";
 mail($to, $subject, $message, $header);
  
-echo "<script type='text/javascript'>window.alert('".$nome."! Sua mensagem foi enviada com sucesso!');</script>";
+
 echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=/">';
+echo "<script type='text/javascript'>window.alert('".$nome."! Sua mensagem foi enviada com sucesso!');</script>";
 exit;
 ?>
