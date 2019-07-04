@@ -4,7 +4,7 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
-$to = "gabriel@estudiolabomba.com";
+$to = "andre@estudiolabomba.com";
 $subject = "Contato de $nome - La Maldición";
 $message = "<strong>Nome:</strong> $nome <br><strong>Telefone:</strong> $telefone<br><strong>E-mail:</strong> $email <br><strong>Mensagem:</strong> $mensagem ";
 $header = "MIME-Version: 1.0\n";
