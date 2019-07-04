@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#000" />
 
     <!-- SEO Tags -->
-    <meta name="description" 
+    <meta name="description"
         content="Ação de Branding realizada pelo Estúdio LaBomba de Design especializados em Branding, Ilustração e Desenvolvimento de Embalagens." />
     <meta name="keywords" content="Cerveja, La Maldicion, Madre, La Bomba, Breja, Estúdio LaBomba" />
 
@@ -332,7 +332,7 @@
                                     Curtiu? Vamos bater um papo por WhatsApp ou nos mande um
                                     e-mail através do formulário abaixo:
                                 </p>
-                                <form action="enviar.php" name="form_contato" method="post">
+                                <form action="enviar.php" method="post">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="nome completo"
                                             name="nome" />
@@ -341,12 +341,11 @@
                                         <input type="tel" class="form-control" placeholder="celular" name="telefone" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="e-mail"
-                                        name="email" />
+                                        <input type="email" class="form-control" placeholder="e-mail" name="email" />
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" rows="5" placeholder="mensagem"
-                                        name="mensagem"></textarea>
+                                            name="mensagem"></textarea>
                                     </div>
                                     <button type="submit">
                                         enviar

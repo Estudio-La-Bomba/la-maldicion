@@ -1,70 +1,18 @@
 <?php
-//Variáveis
- 
 $nome = $_POST['nome'];
-$email = $_POST['email'];
 $telefone = $_POST['telefone'];
+$email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
-// Compo E-mail
-$arquivo = "
-<style type='text/css'>
-body {
-margin:0px;
-font-family:Verdane;
-font-size:12px;
-color: #666666;
-}
-a{
-color: #666666;
-text-decoration: none;
-}
-a:hover {
-color: #FF0000;
-text-decoration: none;
-}
-</style>
-  <html>
-      <table width='510' border='1' cellpadding='1' cellspacing='1' bgcolor='#CCCCCC'>
-          <tr>
-            <td>
-<tr>
-               <td width='500'>Nome:$nome</td>
-              </tr>
-              <tr>
-                <td width='320'>E-mail:<b>$email</b></td>
-   </tr>
-    <tr>
-                <td width='320'>Telefone:<b>$telefone</b></td>
-              </tr>
-              <tr>
-                <td width='320'>Mensagem:$mensagem</td>
-              </tr>
-          </td>
-        </tr>  
-      </table>
-  </html>
-";
-
-//enviar
-   
-  // emails para quem será enviado o formulário
-  $emailenviar = "gabriel@estudiolabomba.com";
-  $destino = $emailenviar;
-  $assunto = "Contato do site La Maldición";
+$to = "gabriel@estudiolabomba.com";
+$subject = "Contato de $nome - La Maldición";
+$message = "<strong>Nome:</strong> $nome <br><strong>Telefone:</strong> $telefone<br><strong>E-mail:</strong> $email <br><strong>Mensagem:</strong> $mensagem ";
+$header = "MIME-Version: 1.0\n";
+$header .= "Content-type: text/html; charset=iso-8859-1\n";
+$header .= "From: $email\n";
+mail($to, $subject, $message, $header);
  
-  // É necessário indicar que o formato do e-mail é html
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $headers .= 'From: $nome <$email>';
-  //$headers .= "Bcc: $EmailPadrao\r\n";
-   
-  $enviaremail = mail($destino, $assunto, $arquivo, $headers);
-  if($enviaremail){
-  $mgm = "E-MAIL ENVIADO COM SUCESSO!";
-  echo " <meta http-equiv='refresh' content='10;URL=index.php'>";
-  } else {
-  $mgm = "ERRO AO ENVIAR E-MAIL!";
-  echo "";
-  }
+echo "<script type='text/javascript'>window.alert('".$nome."! Sua mensagem foi enviada com sucesso!');</script>";
+echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=/">';
+exit;
 ?>
