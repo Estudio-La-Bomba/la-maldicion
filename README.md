@@ -3,7 +3,7 @@
   <img alt="La Maldición" src="https://lamaldicion.estudiolabomba.com/assets/img/cervejas/psico-weizen-la-maldicion.png" width="200px" />
 <br>
 <br>
-Studio4 Web Site
+La Maldición
 </h1>
 
 <p align="center">Disclosure campaign for craft beers at Estúdio La.Bomba, where bottle design was developed.</p>
